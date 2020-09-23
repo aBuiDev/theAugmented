@@ -42,9 +42,9 @@
 
 ### Feature List
 
-* Feature I
-* Feature II
-* Feature II 
+* Feature I:
+* Feature II:
+* Feature II: 
 
 <br>
 
@@ -54,9 +54,9 @@
 
 ### User Interaction & User Experience
 
-* High Level Affordances
-* Interaction Affordances
-* Error Handling
+* High Level Affordances:
+* Interaction Affordances:
+* Error Handling:
 
 <br>
 
