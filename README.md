@@ -30,7 +30,7 @@
 ### Development, Purpose & Scope
 
 * Description: <br>
- The Augemented is a text based game that will prompt users to make emotionally driven decisions that will affect the story's outcome. The Augmented is a an action RPG set in the year 2088 where humanity has begun to advance the technologies of being able to transpose machine with man via body augmentations. The Augmented universe is based loosely one Eidos' original Deus Ex PC game. The Augmented will take place in New York, on Stanten Island - after highly trained and highly advanced unknown terrorists destroy the statue of liberty. The player will take on the role of Agent Caddel, a highly trained and heavily augmented CIA agent - because his body is now over 75% machine, he also fights an internal battle of self discovery and self identity. 
+The Augmented is a text-based game that will prompt users to make emotionally driven decisions that will affect the story's outcome. The Augmented is an action RPG set in the year 2088 where humanity has begun to advance the technologies of being able to transpose machine with man via body augmentations. The Augmented universe is based loosely on Eidos' original Deus Ex PC game. The Augmented will take place in New York, on Staten Island - after highly trained and highly advanced unknown terrorists destroy the statue of liberty. The player will take on the role of Agent Caddel, a highly trained and heavily augmented CIA agent - because his body is now over 75% machine, he also fights an internal battle of self-discovery and self-identity. 
 <br>
 
 * Problem: <br>
@@ -54,15 +54,15 @@
 ### Feature List
 
 * Feature I: <br>
-Users are able to select from two different character classes. Each with different abilities and attributes and each will impact The Augmented's story. This also includes letting the user set the main character's first name.
+Users can select from two different character classes. Each with different abilities and attributes, and each will impact The Augmented's story. This also includes letting the user set the main character's first name.
 <br>
 
 * Feature II: <br>
-To navigate through the story and different locations, the application will use prompts, give the using options of what they can do in the area or do next.
+To navigate through the story and different locations, the application will use prompts, give the user options of what they can do in the area or do next.
 <br>
 
 * Feature II: <br>
-A final turn-based boss fight that will use Ruby's .rand() method to randomly select what attack the final boss will use, the user won't know what the attack will be and will have the option to select from three different attacks or defences. If the attack / defence is countered by the boss, then the user will sustain damage and lose hitpoints. If the user's option counters the bosses attack, the user is given the chance to counter attack and therefore able to do damage to the boss.
+A final turn-based boss fight that will use Ruby's .rand() method to select what attack the final boss will use randomly, the user won't know what the attack will be and will have the option to choose from three different attacks or defences. If the boss counters the attack/defence, then the user will sustain damage and lose hitpoints. If the user's option counters the bosses attack, the user is given a chance to counter-attack and therefore able to do damage to the boss.
 
 * Intended Gem List: <br>
     - Ascii Art
