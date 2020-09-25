@@ -113,6 +113,10 @@ A final turn-based boss fight that will use Ruby's .rand() method to select what
 
 <br>
 
+![Trello Screenshot](./trello_screenshot.jpg)
+
+<br>
+
 #
 
 <br>
