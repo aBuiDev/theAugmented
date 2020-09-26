@@ -16,16 +16,11 @@ visible_separator = LayoutElements::VISIBLE_SEPARATOR
 
 
 LayoutElements.clear
-GameEngine::the_augmented_title
+LayoutElements::the_augmented_title
 
 
 sleep 1
-LayoutElements.clear
 LayoutElements.game_menu
-
-
-player_class = %w(Heavy Assassin)
-prompt.select("Select your class: ", player_class)
 
 
 
