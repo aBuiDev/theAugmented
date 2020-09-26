@@ -4,37 +4,19 @@ require 'colorize'
 require_relative './animations.rb'
 require_relative './modules.rb'
 
-begin
-    def the_augemented_title
-        puts "----------------------------------------------------------------------------------------------------------"
-        puts " "
-        puts " "
-        puts " "
-        puts " "
-        puts " "
-        puts "████████╗██╗░░██╗███████╗  ░█████╗░██╗░░░██╗░██████╗░███╗░░░███╗███████╗███╗░░██╗████████╗███████╗██████╗░".blue
-        puts "╚══██╔══╝██║░░██║██╔════╝  ██╔══██╗██║░░░██║██╔════╝░████╗░████║██╔════╝████╗░██║╚══██╔══╝██╔════╝██╔══██╗".light_blue
-        puts "░░░██║░░░███████║█████╗░░  ███████║██║░░░██║██║░░██╗░██╔████╔██║█████╗░░██╔██╗██║░░░██║░░░█████╗░░██║░░██║".light_blue
-        puts "░░░██║░░░██╔══██║██╔══╝░░  ██╔══██║██║░░░██║██║░░╚██╗██║╚██╔╝██║██╔══╝░░██║╚████║░░░██║░░░██╔══╝░░██║░░██║".light_cyan.blink
-        puts "░░░██║░░░██║░░██║███████╗  ██║░░██║╚██████╔╝╚██████╔╝██║░╚═╝░██║███████╗██║░╚███║░░░██║░░░███████╗██████╔╝".blue
-        puts "░░░╚═╝░░░╚═╝░░╚═╝╚══════╝  ╚═╝░░╚═╝░╚═════╝░░╚═════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═════╝░".blue
-        puts " "
-        puts " "
-        puts "                                                By aBuiDev                                                "
-        puts " "
-        puts " "
-        puts "----------------------------------------------------------------------------------------------------------"
-    end
-rescue
-    puts "Error occured"
-end
+
+
+LayoutElements.clear
 
 
 
-attack_meter
+StoryElements::the_augmented_title
 
 
 
-puts StoryElements::SEPARATOR
+puts LayoutElements::VISIBLE_SEPARATOR
 StoryElements.story_intro
-puts StoryElements::SEPARATOR
+puts LayoutElements::VISIBLE_SEPARATOR
+
+
+
