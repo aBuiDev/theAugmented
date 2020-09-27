@@ -137,17 +137,26 @@ class PlayerClass
     def initialize(player_name)
         @name = player_name
         @inventory = []
-        @weapons = {}
+        @weapons = []
         @quest_items = []
+        @hit_points = 100
+        @power_level = 100
     end
 end
 
 # Machine Tank
 class MachineTank < PlayerClass
-    attr_accessor :name, :inventory
+    attr_accessor :name, :inventory, :weapons, :quest_items, :hit_points, :power_level
     def initialize(player_name)
         super(player_name)
-        @inventory = ["Gep Gun"]
+        @inventory = [
+            {item: "20HP Health Pack", health_amount: 20, quantity: 1}
+        ]
+        @weapons = [
+            {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50}
+        ]
+        @hit_points = 200
+        @power_level = 100
     end
 end
 
@@ -155,11 +164,19 @@ end
 class CyberAssassin < PlayerClass
     def initialize(player_name)
         super
+        @inventory = [
+            {item: "100% Charge Power Pack", charge_amount: 100, quantity: 1}
+        ]
+        @weapons = [
+            {weapon_name: "Nano Blade", ammo: 0, damange: 100}
+        ]
+        @hit_points = 100
+        @power_level = 200
     end
 end
 
-newMachineTank = MachineTank.new("Andrew")
-puts newMachineTank.inventory[0] = ".308"
+newMachineTank = MachineTank.new(player_name)
+puts newMachineTank.inventory[0] = "Sawed Off Shotgun"
 
 
 
