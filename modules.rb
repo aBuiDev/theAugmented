@@ -283,13 +283,19 @@ module LayoutElements
         when 2
 
         when 3
-            
+
         when 4
+            puts LayoutElements::INVISIBLE_SEPARATOR
             new_player.view_inventory
+            puts LayoutElements::INVISIBLE_SEPARATOR
             game_controls(new_player)
+            puts LayoutElements::INVISIBLE_SEPARATOR
         when 5
+            puts LayoutElements::INVISIBLE_SEPARATOR
             new_player.view_weapons
+            puts LayoutElements::INVISIBLE_SEPARATOR
             game_controls(new_player)
+            puts LayoutElements::INVISIBLE_SEPARATOR
         end
     end
 end
