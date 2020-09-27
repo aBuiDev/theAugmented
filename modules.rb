@@ -168,7 +168,7 @@ module GameEngine
   
         case continue_command
         when 1
-            GameEngine.main_story_rendezvuos(new_player)
+            GameEngine.location_rendezvuos_start(new_player)
         when 2
             LayoutElements.clear
             GameEngine.story_intro_part_three(new_player)
@@ -177,8 +177,8 @@ module GameEngine
 
 
 
-    # Main Story: Part One
-    def self.main_story_rendezvuos(new_player)
+    # Location: Rendezvuos Start
+    def self.location_rendezvuos_start(new_player)
         LayoutElements.clear
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
@@ -197,27 +197,7 @@ module GameEngine
         sleep 1
         puts "You decide to..."
         puts LayoutElements::INVISIBLE_SEPARATOR
-        prompt = TTY::Prompt.new
-        game_controls = [
-            {name: 'Visit: Sewers', value: 1},
-            {name: 'Visit: Liberty Statue Head', value: 2},
-            {name: 'Visit: Statue Entrance', value: 3},
-            {name: 'View: Inventory Items', value: 4},
-            {name: 'View: Weapons', value: 5},
-          ]
-        continue_command = prompt.select("Continue:", game_controls)
-  
-        case continue_command
-        when 1
-
-        when 2
-
-        when 3
-
-        when 4
-
-        when 5
-        end
+        LayoutElements.game_controls(new_player)
     end
 end
 
@@ -283,6 +263,33 @@ module LayoutElements
           LayoutElements.about_the_augmented
         when 3
           puts "Thank you for playing The Augmented"
+        end
+    end
+
+    def self.game_controls(new_player)
+        prompt = TTY::Prompt.new
+        game_controls = [
+            {name: 'Visit: Sewers', value: 1},
+            {name: 'Visit: Liberty Statue Head', value: 2},
+            {name: 'Visit: Statue Entrance', value: 3},
+            {name: 'View: Inventory Items', value: 4},
+            {name: 'View: Weapons', value: 5},
+        ]
+        continue_command = prompt.select("Continue:", game_controls)
+
+        case continue_command
+        when 1
+
+        when 2
+
+        when 3
+            
+        when 4
+            new_player.view_inventory
+            game_controls(new_player)
+        when 5
+            new_player.view_weapons
+            game_controls(new_player)
         end
     end
 end
