@@ -10,9 +10,10 @@ end
 
 # Machine Tank
 class MachineTank < PlayerClass
-    attr_reader :name
+    attr_accessor :name, :inventory
     def initialize(player_name)
         super(player_name)
+        @inventory = ["Gep Gun"]
     end
 end
 
@@ -24,4 +25,4 @@ class CyberAssassin < PlayerClass
 end
 
 newMachineTank = MachineTank.new("Andrew")
-puts newMachineTank.name
+puts newMachineTank.inventory[0] = ".308"
