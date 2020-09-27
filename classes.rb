@@ -45,6 +45,3 @@ class CyberAssassin < PlayerClass
     end
 end
 
-newMachineTank = MachineTank.new("Andrew")
-puts newMachineTank.inventory[0]
-puts newMachineTank.class_name

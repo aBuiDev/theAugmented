@@ -1,8 +1,11 @@
-
+require_relative './classes.rb'
+require_relative './animations.rb'
 
 
 # Story Elements Module
 module GameEngine
+
+
 
     INVENTORY = []
     WEAPONS = {}
@@ -16,10 +19,49 @@ module GameEngine
         player_name = gets.chomp
         player_name.to_s
         player_name.capitalize!
-        GameEngine.story_intro_part_one(player_name)
+        GameEngine.player_class(player_name)
     end
 
-    def self.story_intro_part_one(player_name)
+
+
+    def self.player_class(player_name)
+        LayoutElements.clear
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Player class selection screen. "
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Machine Tanks can sustain more damage and are masters of long range weaponry, however, their movements are slower."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Cyber Assassins move much quicker and do massive damage at close range, however, they have lower hit points."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        prompt = TTY::Prompt.new
+        player_class_selection = [
+            {name: 'Machine Tank', value: 1},
+            {name: 'Cyber Assassin', value: 2},
+          ]
+        player_class = prompt.select("Please select your class:", player_class_selection)
+  
+        case player_class
+        when 1
+            LayoutElements.clear
+            new_player = MachineTank.new(player_name)
+            GameEngine.story_intro_part_one(new_player)
+        when 2
+            LayoutElements.clear
+            new_player = CyberAssassin.new(player_name)
+            GameEngine.story_intro_part_one(new_player)
+        end
+    end
+
+
+
+    def self.story_intro_part_one(new_player)
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
         puts LayoutElements::VISIBLE_SEPARATOR
@@ -48,18 +90,20 @@ module GameEngine
   
         case continue_command
         when 1
-            GameEngine.story_intro_part_two(player_name)
+            GameEngine.story_intro_part_two(new_player)
         when 2
             LayoutElements.clear
-            GameEngine.story_intro_part_one(player_name)
+            GameEngine.story_intro_part_one(new_player)
         end
     end
 
-    def self.story_intro_part_two(player_name)
+
+
+    def self.story_intro_part_two(new_player)
         LayoutElements.clear
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
-        puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{player_name.light_cyan} Caddel."
+        puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
     end
 
 
@@ -130,57 +174,6 @@ module LayoutElements
     end
 end
 
-
-
-# Player Classes
-class PlayerClass
-    attr_accessor :name, :inventory, :weapons, :quest_items, :hit_points, :power_level
-    attr_reader :class_name
-    def initialize(player_name)
-        @class_name = class_name
-        @name = player_name
-        @inventory = []
-        @weapons = []
-        @quest_items = []
-        @hit_points = 100
-        @power_level = 100
-    end
-end
-
-# Machine Tank
-class MachineTank < PlayerClass
-    def initialize(player_name)
-        super(player_name)
-        class_name = "MachineTank"
-        @inventory = [
-            {item: "20HP Health Pack", health_amount: 20, quantity: 1}
-        ]
-        @weapons = [
-            {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50}
-        ]
-        @hit_points = 200
-        @power_level = 100
-    end
-end
-
-# Cyber Assassin
-class CyberAssassin < PlayerClass
-    def initialize(player_name)
-        super(player_name)
-        class_name = "CyberAssassin"
-        @inventory = [
-            {item: "100% Charge Power Pack", charge_amount: 100, quantity: 1}
-        ]
-        @weapons = [
-            {weapon_name: "Nano Blade", ammo: 0, damange: 100}
-        ]
-        @hit_points = 100
-        @power_level = 200
-    end
-end
-
-newMachineTank = MachineTank.new("Andrew")
-puts newMachineTank.inventory[0]
 
 
 
