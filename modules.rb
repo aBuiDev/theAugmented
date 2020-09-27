@@ -13,6 +13,8 @@ module GameEngine
     HIT_POINTS = 100
     POWER_LEVEL = 100
 
+
+
     def self.player_name
         puts LayoutElements::INVISIBLE_SEPARATOR
         print "To start game, please input player name here: "
@@ -28,7 +30,9 @@ module GameEngine
         LayoutElements.clear
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
-        puts "Player class selection screen. "
+        puts "Player class selection screen"
+        puts LayoutElements::VISIBLE_SEPARATOR
+        puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
         puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
@@ -64,6 +68,7 @@ module GameEngine
     def self.story_intro_part_one(new_player)
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
+        puts "Intro: Part 1"
         puts LayoutElements::VISIBLE_SEPARATOR
         puts LayoutElements::INVISIBLE_SEPARATOR
         puts "It is the year 2088"
@@ -102,6 +107,10 @@ module GameEngine
 
     def self.story_intro_part_two(new_player)
         LayoutElements.clear
+        sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        puts "Intro: Part 2"
+        puts LayoutElements::VISIBLE_SEPARATOR
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
@@ -129,15 +138,67 @@ module GameEngine
 
     def self.story_intro_part_three(new_player)
         LayoutElements.clear
+        sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        puts "Intro: Part 3"
+        puts LayoutElements::VISIBLE_SEPARATOR
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You are on a ferry to be briefed by your brother on Staten Island."
+        puts "You are on a ferry toward Staten Island."
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Heavily armed and highly augmented terrorists have taken over the island"
+        puts "Your brother, agent Henderson Caddel is already there and waiting at the"
+        puts "rendesvous point to debrief you."
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "you have been deployed to investigate and neutralise the situation."
+        puts "Heavily armed and highly augmented terrorists have taken over the island."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You have been deployed to investigate and neutralise the situation."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "It is 1:08am."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Yes', value: 1},
+            {name: 'Repeat Story', value: 2},
+          ]
+        continue_command = prompt.select("Continue:", continue_only)
+  
+        case continue_command
+        when 1
+            GameEngine.main_story_part_one(new_player)
+        when 2
+            LayoutElements.clear
+            GameEngine.story_intro_part_three(new_player)
+        end
+    end
+
+
+
+    # Main Story: Part One
+    def self.main_story_part_one(new_player)
+        LayoutElements.clear
+        sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        puts LayoutElements::VISIBLE_SEPARATOR
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You are on a ferry toward Staten Island."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Your brother, agent Henderson Caddel is already there and waiting at the"
+        puts "rendesvous point to debrief you."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Heavily armed and highly augmented terrorists have taken over the island."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You have been deployed to investigate and neutralise the situation."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "It is 1:08am."
         puts LayoutElements::INVISIBLE_SEPARATOR
         prompt = TTY::Prompt.new
         continue_only = [
