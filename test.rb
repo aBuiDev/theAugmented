@@ -1,26 +1,27 @@
-module PlayerClasses
 
-    class self.PlayerClass
-        def initialize(player_name)
-            @player_name = player_name
-            @inventory = []
-            @weapons = {}
-            @quest_items = []
-        end
+class PlayerClass
+    def initialize(player_name)
+        @name = player_name
+        @inventory = []
+        @weapons = {}
+        @quest_items = []
     end
-
-    # Mech Tank
-    class self.MechTank < self.PlayerClass
-        def initialize(player_name)
-            super
-        end
-    end
-
-    # Cyber Assassin
-    class self.CyberAssassin < self.PlayerClass
-        def initialize(player_name)
-            super
-        end
-    end
-
 end
+
+# Machine Tank
+class MachineTank < PlayerClass
+    attr_reader :name
+    def initialize(player_name)
+        super(player_name)
+    end
+end
+
+# Cyber Assassin
+class CyberAssassin < PlayerClass
+    def initialize(player_name)
+        super
+    end
+end
+
+newMachineTank = MachineTank.new("Andrew")
+puts newMachineTank.name
