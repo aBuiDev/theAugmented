@@ -17,7 +17,7 @@ end
 class MachineTank < PlayerClass
     def initialize(player_name)
         super(player_name)
-        @class_name = "MachineTank"
+        @class_name = "machine tank"
         @inventory = [
             {item: "20HP Health Pack", health_amount: 20, quantity: 1}
         ]
@@ -33,7 +33,7 @@ end
 class CyberAssassin < PlayerClass
     def initialize(player_name)
         super(player_name)
-        @class_name = "CyberAssassin"
+        @class_name = "cyber assassin"
         @inventory = [
             {item: "100% Charge Power Pack", charge_amount: 100, quantity: 1}
         ]

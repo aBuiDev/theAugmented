@@ -26,20 +26,20 @@ module GameEngine
 
     def self.player_class(player_name)
         LayoutElements.clear
-        puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
         puts "Player class selection screen. "
-        puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
         puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
-        puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
         puts "Machine Tanks can sustain more damage and are masters of long range weaponry, however, their movements are slower."
-        puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
         puts "Cyber Assassins move much quicker and do massive damage at close range, however, they have lower hit points."
-        puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts LayoutElements::INVISIBLE_SEPARATOR
         prompt = TTY::Prompt.new
         player_class_selection = [
             {name: 'Machine Tank', value: 1},
@@ -80,11 +80,12 @@ module GameEngine
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
         puts "the doors of the underworld have been opened to black market and extremely dangerous augmentations..."
+        sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
         prompt = TTY::Prompt.new
         continue_only = [
             {name: 'Yes', value: 1},
-            {name: 'No', value: 2},
+            {name: 'Repeat Story', value: 2},
           ]
         continue_command = prompt.select("Continue:", continue_only)
   
@@ -101,9 +102,57 @@ module GameEngine
 
     def self.story_intro_part_two(new_player)
         LayoutElements.clear
-        sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You are a #{new_player.class_name.light_cyan} class special agent."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Yes', value: 1},
+            {name: 'Repeat Story', value: 2},
+          ]
+        continue_command = prompt.select("Continue:", continue_only)
+  
+        case continue_command
+        when 1
+            GameEngine.story_intro_part_three(new_player)
+        when 2
+            LayoutElements.clear
+            GameEngine.story_intro_part_two(new_player)
+        end
+    end
+
+
+
+    def self.story_intro_part_three(new_player)
+        LayoutElements.clear
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You are on a ferry to be briefed by your brother on Staten Island."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Heavily armed and highly augmented terrorists have taken over the island"
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "you have been deployed to investigate and neutralise the situation."
+        puts LayoutElements::INVISIBLE_SEPARATOR
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Yes', value: 1},
+            {name: 'Repeat Story', value: 2},
+          ]
+        continue_command = prompt.select("Continue:", continue_only)
+  
+        case continue_command
+        when 1
+            GameEngine.story_intro_part_four(new_player)
+        when 2
+            LayoutElements.clear
+            GameEngine.story_intro_part_three(new_player)
+        end
     end
 
 
