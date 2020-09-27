@@ -5,7 +5,7 @@
 module GameEngine
 
     INVENTORY = []
-    WEAPONS = []
+    WEAPONS = {}
     QUEST_ITEMS = []
     HIT_POINTS = 100
     POWER_LEVEL = 100
@@ -68,7 +68,7 @@ end
 
 
 
-# Layout & Structuring Elements
+# Layout & Structuring Elements Module
 module LayoutElements
     VISIBLE_SEPARATOR = "----------------------------------------------------------------------------------------------------------"
     INVISIBLE_SEPARATOR = " "
@@ -128,6 +128,35 @@ module LayoutElements
           puts "Thank you for playing The Augmented"
         end
     end
+end
+
+
+
+module PlayerClasses
+
+    class self.PlayerClass
+        def initialize(player_name)
+            @player_name = player_name
+            @inventory = []
+            @weapons = {}
+            @quest_items = []
+        end
+    end
+
+    # Mech Tank
+    class self.MechTank < self.PlayerClass
+        def initialize(player_name)
+            super
+        end
+    end
+
+    # Cyber Assassin
+    class self.CyberAssassin < self.PlayerClass
+        def initialize(player_name)
+            super
+        end
+    end
+
 end
 
 
