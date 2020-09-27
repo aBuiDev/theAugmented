@@ -18,8 +18,12 @@ visible_separator = LayoutElements::VISIBLE_SEPARATOR
 LayoutElements.clear
 LayoutElements::the_augmented_title
 
-
 sleep 1
+puts LayoutElements::INVISIBLE_SEPARATOR
+loading_bar
+puts LayoutElements::INVISIBLE_SEPARATOR
+puts LayoutElements::INVISIBLE_SEPARATOR
+
 LayoutElements.game_menu
 
 
