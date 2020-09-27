@@ -148,7 +148,7 @@ module GameEngine
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "Your brother, agent Henderson Caddel is already there and waiting at the"
-        puts "rendesvous point to debrief you."
+        puts "rendezvous point to debrief you."
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "Heavily armed and highly augmented terrorists have taken over the island."
@@ -168,7 +168,7 @@ module GameEngine
   
         case continue_command
         when 1
-            GameEngine.main_story_part_one(new_player)
+            GameEngine.main_story_rendezvuos(new_player)
         when 2
             LayoutElements.clear
             GameEngine.story_intro_part_three(new_player)
@@ -178,47 +178,50 @@ module GameEngine
 
 
     # Main Story: Part One
-    def self.main_story_part_one(new_player)
+    def self.main_story_rendezvuos(new_player)
         LayoutElements.clear
         sleep 1
         puts LayoutElements::INVISIBLE_SEPARATOR
+        puts "The Rendezvous"
         puts LayoutElements::VISIBLE_SEPARATOR
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You are on a ferry toward Staten Island."
+        puts "You arrive at the rendezvuos point and there is no sign of Handerson."
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother, agent Henderson Caddel is already there and waiting at the"
-        puts "rendesvous point to debrief you."
+        puts "As the ferry's engine fades into the distance, eerie silence begins to grow."
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Heavily armed and highly augmented terrorists have taken over the island."
+        puts "It has become apparent that this situation has grown even more sinister."
         puts LayoutElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You have been deployed to investigate and neutralise the situation."
-        puts LayoutElements::INVISIBLE_SEPARATOR
-        sleep 1
-        puts "It is 1:08am."
+        puts "You decide to..."
         puts LayoutElements::INVISIBLE_SEPARATOR
         prompt = TTY::Prompt.new
-        continue_only = [
-            {name: 'Yes', value: 1},
-            {name: 'Repeat Story', value: 2},
+        game_controls = [
+            {name: 'Visit: Sewers', value: 1},
+            {name: 'Visit: Liberty Statue Head', value: 2},
+            {name: 'Visit: Statue Entrance', value: 3},
+            {name: 'View: Inventory Items', value: 4},
+            {name: 'View: Weapons', value: 5},
           ]
-        continue_command = prompt.select("Continue:", continue_only)
+        continue_command = prompt.select("Continue:", game_controls)
   
         case continue_command
         when 1
-            GameEngine.story_intro_part_four(new_player)
+
         when 2
-            LayoutElements.clear
-            GameEngine.story_intro_part_three(new_player)
+
+        when 3
+
+        when 4
+
+        when 5
         end
     end
-
-
-
 end
+
+
 
 
 
