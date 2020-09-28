@@ -1,6 +1,6 @@
 # Game Interface
 module InterfaceElements
-    VISIBLE_SEPARATOR = "----------------------------------------------------------------------------------------------------------"
+    VISIBLE_SEPARATOR = "----------------------------------------------------------------------------------------------------------".light_cyan
     INVISIBLE_SEPARATOR = " "
 
     def self.clear
@@ -64,8 +64,45 @@ module InterfaceElements
 
 
 
-    # Game Controls
-    def self.game_controls(new_player)
+    # Deploy Inventory Controls
+    def self.deploy_inventory(new_player)
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        new_player.view_inventory
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        prompt = TTY::Prompt.new
+        inventory_controls = [
+            {name: 'Use Health Kit', value: 1},
+            {name: 'Use Power Charge', value: 2},
+            {name: 'Close Inventory', value: 3},
+        ]
+        inventory_command = prompt.select("Game Controls:", inventory_controls)
+
+        case inventory_command
+
+        when 1
+
+        when 2
+
+        when 3
+
+
+
+        end
+    end
+
+
+
+    # Deply Weapoon Storage Controls
+    def self.deploy_weapon_storage(new_player)
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        new_player.view_weapons
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+    end
+
+
+
+    # Rendezvous Game Controls
+    def self.rendezvous_game_controls(new_player)
         prompt = TTY::Prompt.new
         game_controls = [
             {name: 'Visit: Sewers', value: 1},
@@ -77,8 +114,9 @@ module InterfaceElements
         continue_command = prompt.select("Game Controls:", game_controls)
 
         case continue_command
-        when 1
 
+        when 1
+            GameLocations.location_sewers(new_player)
         when 2
 
         when 3
@@ -87,14 +125,66 @@ module InterfaceElements
             puts InterfaceElements::INVISIBLE_SEPARATOR
             new_player.view_inventory
             puts InterfaceElements::INVISIBLE_SEPARATOR
-            game_controls(new_player)
+            rendezvous_game_controls(new_player)
             puts InterfaceElements::INVISIBLE_SEPARATOR
         when 5
             puts InterfaceElements::INVISIBLE_SEPARATOR
             new_player.view_weapons
             puts InterfaceElements::INVISIBLE_SEPARATOR
-            game_controls(new_player)
+            rendezvous_game_controls(new_player)
             puts InterfaceElements::INVISIBLE_SEPARATOR
         end
     end
+
+
+
+
+
+    # Sewers Game Controls
+    def self.sewers_game_controls(new_player)
+        prompt = TTY::Prompt.new
+        game_controls = [
+            {name: 'Loot Mutated Sewer Rat Body', value: 1},
+            {name: 'Visit: Rendezvous', value: 2},
+            {name: 'Visit: Liberty Statue Head', value: 3},
+            {name: 'Visit: Statue Entrance', value: 4},
+            {name: 'View: Inventory Items', value: 5},
+            {name: 'View: Weapons', value: 6},
+        ]
+        continue_command = prompt.select("Game Controls:", game_controls)
+
+        case continue_command   
+        when 1
+            gep_gun = {weapon_name: "GEP Gun", ammo: 3, damange: 200}
+            new_player.pickup_weapon(gep_gun)
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts "(Guided Explosive Projectile)GEP Gun, picked up."
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+
+            InterfaceElements.sewers_game_controls(new_player)
+        when 2
+
+        when 3
+
+        when 4
+
+        when 5
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            new_player.view_inventory
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.sewers_game_controls(new_player)
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+        when 6
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            new_player.view_weapons
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.sewers_game_controls(new_player)
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+        end
+    end
+
+
+
+
 end

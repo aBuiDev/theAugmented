@@ -190,11 +190,11 @@ module Animations
         
         ]
         i = 0
-        while i < 3
+        while i < 10
             alert_array.each do | alert |
-                sleep 0.5
+                sleep 0.1
                 puts alert
-                sleep 0.5
+                sleep 0.1
                 InterfaceElements.clear
             end
             i += 1

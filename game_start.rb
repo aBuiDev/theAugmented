@@ -16,7 +16,7 @@ module GameIntro
 
     def self.player_name
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Player Name"
+        puts "Player Name".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         print "To start game, please input your name here: "
@@ -31,7 +31,7 @@ module GameIntro
     def self.player_class(player_name)
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Player class selection screen"
+        puts "Player class selection screen".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
@@ -51,7 +51,7 @@ module GameIntro
             {name: 'Machine Tank', value: 1},
             {name: 'Cyber Assassin', value: 2},
           ]
-        player_class = prompt.select("Please select your class:", player_class_selection)
+        player_class = prompt.select("Please select your class:".light_cyan, player_class_selection)
   
         case player_class
         when 1
@@ -69,7 +69,7 @@ module GameIntro
 
     def self.story_intro_part_one(new_player)
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Intro: Part 1"
+        puts "Intro: Part 1".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "It is the year 2088"
@@ -88,20 +88,18 @@ module GameIntro
         puts "the doors of the underworld have been opened to black market and extremely dangerous augmentations..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
+
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
-            {name: 'Yes', value: 1},
-            {name: 'Back to Class Selection Screen', value: 2},
+            {name: 'Continue', value: 1},
           ]
-        continue_command = prompt.select("Continue?:", continue_only)
-  
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+
+        # Control Conditionals ------------------------------------------------------------------
         case continue_command
         when 1
             GameIntro.story_intro_part_two(new_player)
-        when 2
-            InterfaceElements.clear
-            GameIntro.player_class(new_player)
         end
     end
 
@@ -110,7 +108,7 @@ module GameIntro
     def self.story_intro_part_two(new_player)
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Intro: Part 2"
+        puts "Intro: Part 2".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
@@ -119,20 +117,18 @@ module GameIntro
         sleep 1
         puts "You are a #{new_player.class_name.light_cyan} class special agent."
         puts InterfaceElements::INVISIBLE_SEPARATOR
+
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
-            {name: 'Yes', value: 1},
-            {name: 'Back', value: 2},
+            {name: 'Continue', value: 1},
           ]
-        continue_command = prompt.select("Continue?:", continue_only)
-  
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+
+        # Control Conditionals ------------------------------------------------------------------
         case continue_command
         when 1
             GameIntro.story_intro_part_three(new_player)
-        when 2
-            InterfaceElements.clear
-            GameIntro.story_intro_part_one(new_player)
         end
     end
 
@@ -141,7 +137,7 @@ module GameIntro
     def self.story_intro_part_three(new_player)
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Intro: Part 3"
+        puts "Intro: Part 3".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
@@ -160,20 +156,18 @@ module GameIntro
         sleep 1
         puts "It is 1:08am."
         puts InterfaceElements::INVISIBLE_SEPARATOR
+
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
-            {name: 'Yes', value: 1},
-            {name: 'Back', value: 2},
+            {name: 'Continue', value: 1},
           ]
-        continue_command = prompt.select("Continue?:", continue_only)
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
   
+        # Control Conditionals ------------------------------------------------------------------
         case continue_command
         when 1
             GameLocations.location_rendezvuos_start(new_player)
-        when 2
-            InterfaceElements.clear
-            GameIntro.story_intro_part_two(new_player)
         end
     end
 end

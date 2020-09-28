@@ -21,24 +21,32 @@ class PlayerClass
         @quest_items = []
         @hit_points = 100
         @power_level = 100
+        @inventory_row = []
+        @weapon_row = []
     end
 
     def view_inventory
-        rows = []
         @inventory.each do | item |
-            rows << [item[:item_name], item[:quantity]]
+            @inventory_row << [item[:item_name], item[:quantity]]
         end
-        table = Terminal::Table.new :headings => ['Item', 'Quantity'], :rows => rows
+        table = Terminal::Table.new :headings => ['Item', 'Quantity'], :rows => @inventory_row
         puts table
     end
 
     def view_weapons
-        rows = []
         @weapons.each do | weapon |
-            rows << [weapon[:weapon_name], weapon[:ammo]]
+            @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
         end
-        table = Terminal::Table.new :headings => ['Weapon', 'Ammo'], :rows => rows
+        table = Terminal::Table.new :headings => ['Weapon', 'Ammo'], :rows => @weapon_row
         puts table
+    end
+
+    def loot_item(item)
+            @inventory_row << [item[:item_name], item[:quantity]]
+    end
+
+    def pickup_weapon(weapon)
+            @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
     end
 end
 
@@ -50,7 +58,8 @@ class MachineTank < PlayerClass
         super(player_name)
         @class_name = "machine tank"
         @inventory = [
-            health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 1}
+            health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 1},
+            power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 0}
         ]
         @weapons = [
             sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50}
@@ -64,6 +73,14 @@ class MachineTank < PlayerClass
     end
 
     def view_weapons
+        super
+    end
+
+    def loot_item(item)
+        super
+    end
+
+    def pickup_weapon(weapon)
         super
     end
 
@@ -83,6 +100,7 @@ class CyberAssassin < PlayerClass
         super(player_name)
         @class_name = "cyber assassin"
         @inventory = [
+            health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 0},
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 1}
         ]
         @weapons = [
@@ -97,6 +115,14 @@ class CyberAssassin < PlayerClass
     end
 
     def view_weapons
+        super
+    end
+
+    def loot_item(item)
+        super
+    end
+
+    def pickup_weapon(weapon)
         super
     end
 
