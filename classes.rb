@@ -146,6 +146,5 @@ class HermesHimler
     end
 end
 
-
-
-puts HermesHimler.boss_name
+player = CyberAssassin.new("Andrew")
+puts player.weapons[0][:weapon_name].include? "GEP Gun"
