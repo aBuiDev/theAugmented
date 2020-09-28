@@ -5,7 +5,7 @@ require 'tty-prompt'
 require 'terminal-table'
 require_relative './animations.rb'
 require_relative './modules.rb'
-require_relative './classes.rb'
+require_relative './interface.rb'
 
 
 
@@ -111,7 +111,13 @@ end
 
 
 # Bosses 
-class HermesMuntzman
-
+class HermesHimler
+    attr_reader :boss_name
+    def self.boss_name
+        boss_name = "Hermes Himler"
+    end
 end
 
+
+
+puts HermesHimler.boss_name

@@ -3,9 +3,7 @@ require 'time'
 require 'colorize'
 require 'tty-prompt'
 require 'terminal-table'
-require_relative './animations.rb'
 require_relative './modules.rb'
-require_relative './classes.rb'
 
 module Animations
 
@@ -162,19 +160,44 @@ module Animations
         i = 0
         while i < 3
             alert_array.each do | alert |
-                sleep 0.1
+                sleep 0.25
                 puts alert
                 sleep 0.25
-                LayoutElements.clear
+                InterfaceElements.clear
             end
             i += 1
         end 
     end
     # Alert Animation
 
-end
 
-Animations.alert_animation
+
+    # Alert Animation Two
+    def self.alert_animation_two
+        exclamation_array = [
+            "
+             _
+            | |
+            | |
+            | |
+            |_|
+            (_)
+            
+            ",
+            "
+            _
+           | |
+           | |
+           | |
+           |_|
+           (_)   (_)   (_)   (_)  
+           
+           ",
+        ]
+    end
+
+
+end
 
 
 
