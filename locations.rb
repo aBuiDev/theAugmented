@@ -50,7 +50,7 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "The Sewers"
+        puts "The Sewers".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You venture into the sewers in search of your brother, besides the sound of your footsteps and"

@@ -33,7 +33,6 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Player class selection screen".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
-        puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
@@ -71,6 +70,7 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 1".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "It is the year 2088"
         sleep 1
@@ -110,12 +110,13 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 2".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
-        puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
-        puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You are a #{new_player.class_name.light_cyan} class special agent."
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
 
         # Interface Controls --------------------------------------------------------------------

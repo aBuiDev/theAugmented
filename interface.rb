@@ -158,10 +158,15 @@ module InterfaceElements
             gep_gun = {weapon_name: "GEP Gun", ammo: 3, damange: 200}
             new_player.pickup_weapon(gep_gun)
             puts InterfaceElements::INVISIBLE_SEPARATOR
-            puts "(Guided Explosive Projectile)GEP Gun, picked up."
+            puts "Upon inspection of the creature, you discover a"
+            puts "#{"(Guided Explosive Projectile) GEP Gun".light_cyan} attached to it's body."
             puts InterfaceElements::INVISIBLE_SEPARATOR
+            sleep 1
+            puts "You loot the creature's body.".yellow
             puts InterfaceElements::INVISIBLE_SEPARATOR
-
+            sleep 1
+            puts "(Guided Explosive Projectile) GEP Gun added to weapons".green
+            puts InterfaceElements::INVISIBLE_SEPARATOR
             InterfaceElements.sewers_game_controls(new_player)
         when 2
 

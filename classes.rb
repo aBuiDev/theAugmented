@@ -17,7 +17,9 @@ class PlayerClass
         @class_name = class_name
         @name = player_name
         @inventory = []
+        @inventory_row = []
         @weapons = []
+        @weapon_row = []
         @quest_items = []
         @hit_points = 100
         @power_level = 100
@@ -26,17 +28,11 @@ class PlayerClass
     end
 
     def view_inventory
-        @inventory.each do | item |
-            @inventory_row << [item[:item_name], item[:quantity]]
-        end
         table = Terminal::Table.new :headings => ['Item', 'Quantity'], :rows => @inventory_row
         puts table
     end
 
     def view_weapons
-        @weapons.each do | weapon |
-            @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
-        end
         table = Terminal::Table.new :headings => ['Weapon', 'Ammo'], :rows => @weapon_row
         puts table
     end
@@ -61,9 +57,15 @@ class MachineTank < PlayerClass
             health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 1},
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 0}
         ]
+        @inventory.each do | item |
+            @inventory_row << [item[:item_name], item[:quantity]]
+        end
         @weapons = [
             sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50}
         ]
+        @weapons.each do | weapon |
+            @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
+        end
         @hit_points = 200
         @power_level = 100
     end
