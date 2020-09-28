@@ -1,7 +1,16 @@
-require './modules.rb'
+# Dependencies
+require 'time'
 require 'colorize'
+require 'tty-prompt'
+require 'terminal-table'
+require_relative './animations.rb'
+require_relative './modules.rb'
+require_relative './classes.rb'
 
 module Animations
+
+
+
     # Repeating Dot Animation
     def self.repeating_dot
         i = 1
@@ -43,7 +52,6 @@ module Animations
             i += 1
         end
     end
-
 
 
 
@@ -110,18 +118,17 @@ module Animations
         loading_bar_array.each do | bar |
             i = 0
             while i < 1
-                sleep 0.05
+                sleep 0.1
                 print "\r" + bar
                 i += 1
             end
         end
     end
-end
 
 
 
-    def alert_animation
-
+    # Alert Animation
+    def self.alert_animation
         alert_array = [
         "
               _      ______ _____ _______ _ 
@@ -133,12 +140,12 @@ end
                                     
         ".to_s.red,
         "
-                                                   _      ______ _____ _______ _ 
-                                             /\\   | |    |  ____|  __ \\__   __| |
-                                            /  \\  | |    | |__  | |__) | | |  | |
-                                           / /\\ \\ | |    |  __| |  _  /  | |  | |
-                                          / ____ \\| |____| |____| | \\ \\  | |  |_|
-                                         /_/    \\_\\______|______|_|  \\_\\ |_|  (_)
+                                                    _      ______ _____ _______ _ 
+                                              /\\   | |    |  ____|  __ \\__   __| |
+                                             /  \\  | |    | |__  | |__) | | |  | |
+                                            / /\\ \\ | |    |  __| |  _  /  | |  | |
+                                           / ____ \\| |____| |____| | \\ \\  | |  |_|
+                                          /_/    \\_\\______|______|_|  \\_\\ |_|  (_)
                               
         ".to_s.red,
         "
@@ -149,12 +156,29 @@ end
                                                                                 / ____ \\| |____| |____| | \\ \\  | |  |_|
                                                                                /_/    \\_\\______|______|_|  \\_\\ |_|  (_)
 
-".to_s.red,
+        ".to_s.red,
         
         ]
-
-        puts alert_array
-
+        i = 0
+        while i < 3
+            alert_array.each do | alert |
+                sleep 0.1
+                puts alert
+                sleep 0.25
+                LayoutElements.clear
+            end
+            i += 1
+        end 
     end
+    # Alert Animation
+
+end
+
+Animations.alert_animation
+
+
+
+
+ 
 
 

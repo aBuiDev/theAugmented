@@ -1,5 +1,11 @@
 # Dependencies
+require 'time'
+require 'colorize'
+require 'tty-prompt'
 require 'terminal-table'
+require_relative './animations.rb'
+require_relative './modules.rb'
+require_relative './classes.rb'
 
 
 
@@ -65,9 +71,9 @@ end
 
 
 
-new_tank = MachineTank.new("Andrew")
-new_tank.view_inventory
-new_tank.view_weapons
+# new_tank = MachineTank.new("Andrew")
+# new_tank.view_inventory
+# new_tank.view_weapons
 
 
 
@@ -98,9 +104,9 @@ end
 
 
 
-new_assassin = CyberAssassin.new("Andrew")
-new_assassin.view_inventory
-new_assassin.view_weapons
+# new_assassin = CyberAssassin.new("Andrew")
+# new_assassin.view_inventory
+# new_assassin.view_weapons
 
 
 

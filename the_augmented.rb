@@ -2,6 +2,7 @@
 require 'time'
 require 'colorize'
 require 'tty-prompt'
+require 'terminal-table'
 require_relative './animations.rb'
 require_relative './modules.rb'
 require_relative './classes.rb'
