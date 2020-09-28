@@ -43,6 +43,7 @@ class PlayerClass
 
     def pickup_weapon(weapon)
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
+            @weapons << weapon
     end
 end
 
@@ -61,7 +62,8 @@ class MachineTank < PlayerClass
             @inventory_row << [item[:item_name], item[:quantity]]
         end
         @weapons = [
-            sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50},
+            sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damage: 50},
+            gep_gun = {weapon_name: "GEP Gun", ammo: 3, damage: 200}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
@@ -106,7 +108,7 @@ class CyberAssassin < PlayerClass
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 1}
         ]
         @weapons = [
-            nano_blade = {weapon_name: "Nano Blade", ammo: 0, damange: 100}
+            nano_blade = {weapon_name: "Nano Blade", ammo: 0, damage: 100}
         ]
         @hit_points = 100
         @power_level = 200
