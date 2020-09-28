@@ -53,7 +53,7 @@ module InterfaceElements
         case game_menu_user_selection
         when 1
           InterfaceElements.clear
-          GameEngine.player_name
+          GameIntro.player_name
         when 2
           InterfaceElements.clear
           InterfaceElements.about_the_augmented

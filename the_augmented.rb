@@ -4,9 +4,10 @@ require 'colorize'
 require 'tty-prompt'
 require 'terminal-table'
 require_relative './animations.rb'
-require_relative './modules.rb'
+require_relative './game_start.rb'
 require_relative './classes.rb'
 require_relative './interface.rb'
+require_relative './locations.rb'
 
 
 # TTY-Prompt

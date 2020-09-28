@@ -6,27 +6,30 @@ require 'terminal-table'
 require_relative './animations.rb'
 require_relative './classes.rb'
 require_relative './interface.rb'
+require_relative './locations.rb'
 
 
 # Story Elements Module
-module GameEngine
+module GameIntro
 
 
 
     def self.player_name
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        print "To start game, please input player name here: "
+        puts "Player Name"
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "To start game, please input your name here: "
         player_name = gets.chomp
         player_name.to_s
         player_name.capitalize!
-        GameEngine.player_class(player_name)
+        GameIntro.player_class(player_name)
     end
 
 
 
     def self.player_class(player_name)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Player class selection screen"
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -42,6 +45,7 @@ module GameEngine
         puts "Cyber Assassins move much quicker and do massive damage at close range, however, they have lower hit points."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         player_class_selection = [
             {name: 'Machine Tank', value: 1},
@@ -53,18 +57,17 @@ module GameEngine
         when 1
             InterfaceElements.clear
             new_player = MachineTank.new(player_name)
-            GameEngine.story_intro_part_one(new_player)
+            GameIntro.story_intro_part_one(new_player)
         when 2
             InterfaceElements.clear
             new_player = CyberAssassin.new(player_name)
-            GameEngine.story_intro_part_one(new_player)
+            GameIntro.story_intro_part_one(new_player)
         end
     end
 
 
 
     def self.story_intro_part_one(new_player)
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 1"
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -85,19 +88,20 @@ module GameEngine
         puts "the doors of the underworld have been opened to black market and extremely dangerous augmentations..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
             {name: 'Yes', value: 1},
             {name: 'Back to Class Selection Screen', value: 2},
           ]
-        continue_command = prompt.select("Game Controls:", continue_only)
+        continue_command = prompt.select("Continue?:", continue_only)
   
         case continue_command
         when 1
-            GameEngine.story_intro_part_two(new_player)
+            GameIntro.story_intro_part_two(new_player)
         when 2
             InterfaceElements.clear
-            GameEngine.player_class(new_player)
+            GameIntro.player_class(new_player)
         end
     end
 
@@ -105,7 +109,6 @@ module GameEngine
 
     def self.story_intro_part_two(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 2"
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -116,19 +119,20 @@ module GameEngine
         sleep 1
         puts "You are a #{new_player.class_name.light_cyan} class special agent."
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
             {name: 'Yes', value: 1},
             {name: 'Back', value: 2},
           ]
-        continue_command = prompt.select("Game Controls:", continue_only)
+        continue_command = prompt.select("Continue?:", continue_only)
   
         case continue_command
         when 1
-            GameEngine.story_intro_part_three(new_player)
+            GameIntro.story_intro_part_three(new_player)
         when 2
             InterfaceElements.clear
-            GameEngine.story_intro_part_one(new_player)
+            GameIntro.story_intro_part_one(new_player)
         end
     end
 
@@ -136,7 +140,6 @@ module GameEngine
 
     def self.story_intro_part_three(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 3"
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -157,45 +160,21 @@ module GameEngine
         sleep 1
         puts "It is 1:08am."
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
             {name: 'Yes', value: 1},
             {name: 'Back', value: 2},
           ]
-        continue_command = prompt.select("Game Controls:", continue_only)
+        continue_command = prompt.select("Continue?:", continue_only)
   
         case continue_command
         when 1
-            GameEngine.location_rendezvuos_start(new_player)
+            GameLocations.location_rendezvuos_start(new_player)
         when 2
             InterfaceElements.clear
-            GameEngine.story_intro_part_two(new_player)
+            GameIntro.story_intro_part_two(new_player)
         end
-    end
-
-
-
-    # Location: Rendezvuos Start
-    def self.location_rendezvuos_start(new_player)
-        InterfaceElements.clear
-        sleep 1
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "The Rendezvous"
-        puts InterfaceElements::VISIBLE_SEPARATOR
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        sleep 1
-        puts "You arrive at the rendezvuos point and there is no sign of Henderson."
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        sleep 1
-        puts "As the ferry's engine fades into the distance, eerie silence begins to grow."
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        sleep 1
-        puts "It has become apparent that this situation has grown even more sinister."
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        sleep 1
-        puts "You decide to..."
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        InterfaceElements.game_controls(new_player)
     end
 end
 
