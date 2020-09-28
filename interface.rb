@@ -142,6 +142,7 @@ module InterfaceElements
 
     # Sewers Game Controls
     def self.sewers_game_controls(new_player)
+        gep_gun = {weapon_name: "GEP Gun", ammo: 3, damange: 200}
         prompt = TTY::Prompt.new
         game_controls = [
             {name: 'Loot Mutated Sewer Rat Body', value: 1},
@@ -156,13 +157,13 @@ module InterfaceElements
         case continue_command   
         when 1
             new_player.weapons.each do | weapon |
-                if weapon[:weapon_name].include? "GEP Gun"
+                if weapon[:weapon_name] === "GEP Gun"
                     puts InterfaceElements::INVISIBLE_SEPARATOR
                     puts "Creature has already been looted."
                     puts InterfaceElements::INVISIBLE_SEPARATOR
+                    sleep 1
                     InterfaceElements.sewers_game_controls(new_player)
                 else
-                    gep_gun = {weapon_name: "GEP Gun", ammo: 3, damange: 200}
                     new_player.pickup_weapon(gep_gun)
                     puts InterfaceElements::INVISIBLE_SEPARATOR
                     puts "Upon inspection of the creature, you discover a"

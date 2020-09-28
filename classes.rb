@@ -61,7 +61,7 @@ class MachineTank < PlayerClass
             @inventory_row << [item[:item_name], item[:quantity]]
         end
         @weapons = [
-            sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50}
+            sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damange: 50},
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
