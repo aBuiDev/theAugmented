@@ -53,7 +53,8 @@ module Animations
     end
 
 
-
+    
+    # Night Vision Scanner
     def self.night_vision_scan
         night_vision_array = [
             "|<()>|....................................................................................................".blue,
@@ -79,6 +80,7 @@ module Animations
             i += 1
         end
     end
+    # Night Vision Scanner
 
 
 
@@ -151,6 +153,7 @@ module Animations
             end
         end
     end
+    # Loading Bar Animation
 
 
 
@@ -201,7 +204,7 @@ module Animations
 
 
 
-    
+
 end
 
  
