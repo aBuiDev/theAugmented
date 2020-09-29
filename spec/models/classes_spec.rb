@@ -1,9 +1,13 @@
+require 'rspec'
 require_relative '../../classes.rb'
 
-RSpec.describe PlayerClass(name) do
-    it 'Should respond to name' do
-        player_class = PlayerClass.new(name)
-        expect(player_class).to respond_to :name
+RSpec.describe MachineTank(name) do
+    it 'Should create new player' do
+        new_player = MachineTank.new("Andrew")
+        expect(new_player).new("Andrew")
     end
 end
+
+
+
 

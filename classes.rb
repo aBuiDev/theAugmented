@@ -11,7 +11,7 @@ require_relative './interface.rb'
 
 # Player Classes
 class PlayerClass
-    attr_accessor :name, :inventory, :inventory_row, :weapons, :weapon_row, :quest_items, :hit_points, :power_level
+    attr_accessor :name, :inventory, :inventory_row, :weapons, :weapon_row, :weapon_name, :quest_items, :hit_points, :power_level
     attr_reader :class_name 
     def initialize(player_name)
         @class_name = class_name
@@ -49,8 +49,9 @@ class PlayerClass
     end
 
     def add_weapon_name(weapon)
-        @weapon_name << [weapon[:weapon_name]
+        @weapon_name << weapon[:weapon_name]
     end
+
 end
 
 
