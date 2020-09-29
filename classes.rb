@@ -52,10 +52,6 @@ class PlayerClass
         @weapon_name << weapon[:weapon_name]
     end
 
-    def view_weapon_name
-        @weapon_name
-    end
-
 end
 
 
@@ -74,7 +70,6 @@ class MachineTank < PlayerClass
         end
         @weapons = [
             {weapon_name: "Sawed Off Shotgun", ammo: 10, damage: 50},
-            {weapon_name: "Sniper Rifle", ammo: 2, damage: 100}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
@@ -108,10 +103,6 @@ class MachineTank < PlayerClass
         super
     end
 
-    def view_weapon_name
-        super
-    end
-
 end
 
 
@@ -136,7 +127,6 @@ class CyberAssassin < PlayerClass
         end
         @weapons = [
             {weapon_name: "Nano Blade", ammo: 0, damage: 100},
-            {weapon_name: "Sniper Rifle", ammo: 2, damage: 100}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
@@ -170,10 +160,6 @@ class CyberAssassin < PlayerClass
         super
     end
 
-    def view_weapon_name
-        super
-    end
-
 end
 
 
@@ -191,6 +177,3 @@ class HermesHimler
         boss_name = "Hermes Himler"
     end
 end
-
-# player = CyberAssassin.new("Andrew")
-# puts player.weapon_name
