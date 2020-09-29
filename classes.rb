@@ -74,7 +74,6 @@ class MachineTank < PlayerClass
         end
         @weapons = [
             {weapon_name: "Sawed Off Shotgun", ammo: 10, damage: 50},
-            {weapon_name: "Sniper Rifle", ammo: 2, damage: 100}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
@@ -136,7 +135,6 @@ class CyberAssassin < PlayerClass
         end
         @weapons = [
             {weapon_name: "Nano Blade", ammo: 0, damage: 100},
-            {weapon_name: "Sniper Rifle", ammo: 2, damage: 100}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
