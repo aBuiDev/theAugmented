@@ -124,6 +124,9 @@ class CyberAssassin < PlayerClass
         @weapons = [
             {weapon_name: "Nano Blade", ammo: 0, damage: 100}
         ]
+        @weapons.each do | weapon |
+            @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
+        end
         @hit_points = 100
         @power_level = 200
     end
