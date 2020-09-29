@@ -11,7 +11,7 @@ require_relative './interface.rb'
 
 # Player Classes
 class PlayerClass
-    attr_accessor :name, :inventory, :weapons, :quest_items, :hit_points, :power_level
+    attr_accessor :name, :inventory, :inventory_row, :weapons, :weapon_row, :quest_items, :hit_points, :power_level
     attr_reader :class_name 
     def initialize(player_name)
         @class_name = class_name
@@ -20,11 +20,10 @@ class PlayerClass
         @inventory_row = []
         @weapons = []
         @weapon_row = []
+        @weapon_name = []
         @quest_items = []
         @hit_points = 100
         @power_level = 100
-        @inventory_row = []
-        @weapon_row = []
     end
 
     def view_inventory
@@ -38,12 +37,19 @@ class PlayerClass
     end
 
     def loot_item(item)
-            @inventory_row << [item[:item_name], item[:quantity]]
+        @inventory_row << [item[:item_name], item[:quantity]]
     end
 
     def pickup_weapon(weapon)
-            @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
-            @weapons << weapon
+        @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
+    end
+
+    def add_weapon(weapon)
+        @weapons.append(weapon) 
+    end
+
+    def add_weapon_name(weapon)
+        @weapon_name << [weapon[:weapon_name]
     end
 end
 
@@ -62,8 +68,7 @@ class MachineTank < PlayerClass
             @inventory_row << [item[:item_name], item[:quantity]]
         end
         @weapons = [
-            sawed_off_shotgun = {weapon_name: "Sawed Off Shotgun", ammo: 10, damage: 50},
-            gep_gun = {weapon_name: "GEP Gun", ammo: 3, damage: 200}
+            {weapon_name: "Sawed Off Shotgun", ammo: 10, damage: 50},
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
@@ -88,6 +93,14 @@ class MachineTank < PlayerClass
         super
     end
 
+    def add_weapon(weapon)
+        super
+    end
+
+    def add_weapon_name(weapon)
+        super
+    end
+
 end
 
 
@@ -108,7 +121,7 @@ class CyberAssassin < PlayerClass
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 1}
         ]
         @weapons = [
-            nano_blade = {weapon_name: "Nano Blade", ammo: 0, damage: 100}
+            {weapon_name: "Nano Blade", ammo: 0, damage: 100}
         ]
         @hit_points = 100
         @power_level = 200
@@ -127,6 +140,14 @@ class CyberAssassin < PlayerClass
     end
 
     def pickup_weapon(weapon)
+        super
+    end
+
+    def add_weapon(weapon)
+        super
+    end
+
+    def add_weapon_name(weapon)
         super
     end
 

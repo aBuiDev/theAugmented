@@ -156,30 +156,54 @@ module InterfaceElements
 
         case continue_command   
         when 1
-            new_player.weapons.each do | weapon |
-                weapon.each do | key, value |
-                    if value == "GEP Gun"
-                        puts InterfaceElements::INVISIBLE_SEPARATOR
-                        puts "Creature has already been looted."
-                        puts InterfaceElements::INVISIBLE_SEPARATOR
-                        sleep 1
-                        InterfaceElements.sewers_game_controls(new_player)
-                    else
-                        new_player.pickup_weapon(gep_gun)
-                        puts InterfaceElements::INVISIBLE_SEPARATOR
-                        puts "Upon inspection of the creature, you discover a"
-                        puts "#{"(Guided Explosive Projectile) GEP Gun".light_cyan}."
-                        puts InterfaceElements::INVISIBLE_SEPARATOR
-                        sleep 1
-                        puts "You loot the creature's body.".yellow
-                        puts InterfaceElements::INVISIBLE_SEPARATOR
-                        sleep 1
-                        puts ">> (Guided Explosive Projectile) GEP Gun added to weapons <<".green
-                        puts InterfaceElements::INVISIBLE_SEPARATOR
-                        InterfaceElements.sewers_game_controls(new_player)
-                    end
-                end
-            end
+            new_player.pickup_weapon(gep_gun)
+            new_player.add_weapon(gep_gun)
+            new_player.add_weapon_name(gep_gun)
+            # puts InterfaceElements::INVISIBLE_SEPARATOR
+            # puts "Upon inspection of the creature, you discover a"
+            # puts "#{"(Guided Explosive Projectile) GEP Gun".light_cyan}."
+            # puts InterfaceElements::INVISIBLE_SEPARATOR
+            # sleep 1
+            # puts "You loot the creature's body.".yellow
+            # puts InterfaceElements::INVISIBLE_SEPARATOR
+            # sleep 1
+            # puts ">> (Guided Explosive Projectile) GEP Gun added to weapons <<".green
+            # puts InterfaceElements::INVISIBLE_SEPARATOR
+            # InterfaceElements.sewers_game_controls(new_player)
+
+
+
+            
+            # new_player.weapons.each do | weapon |
+            #     if weapon[:weapon_name] == "GEP Gun"
+            #         next
+            #     else
+            #         puts "No GEP Gun."
+            #     end
+            # end
+
+            # i = 0
+            # while i < new_player.weapons.length
+            #     if gep_gun_item = new_player.weapons[i][:weapon_name] == "GEP Gun"
+            #         puts "Has Fucking GEP Gun!"
+            #     else
+            #         puts "No FUCKING GEP GUN!"
+            #     end
+            #     i += 1
+            # end
+
+            #         if value == "GEP Gun"
+            #             puts InterfaceElements::INVISIBLE_SEPARATOR
+            #             puts "Creature has already been looted."
+            #             puts InterfaceElements::INVISIBLE_SEPARATOR
+            #             sleep 1
+            #             InterfaceElements.sewers_game_controls(new_player)
+            #         else
+            #             next  
+            #         end 
+            #     end
+            # end
+            InterfaceElements.sewers_game_controls(new_player)
         when 2
 
         when 3
@@ -195,6 +219,7 @@ module InterfaceElements
         when 6
             puts InterfaceElements::INVISIBLE_SEPARATOR
             new_player.view_weapons
+            puts new_player.weapons
             puts InterfaceElements::INVISIBLE_SEPARATOR
             InterfaceElements.sewers_game_controls(new_player)
             puts InterfaceElements::INVISIBLE_SEPARATOR
