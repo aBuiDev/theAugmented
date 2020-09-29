@@ -33,16 +33,18 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Player class selection screen".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Machine Tanks can sustain more damage and are masters of long range weaponry, however, their movements are slower."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Cyber Assassins move much quicker and do massive damage at close range, however, they have lower hit points."
-        # sleep 1
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
@@ -70,25 +72,26 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 1".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "It is the year 2088"
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Advancements in technology has lead to an influx of a new generation of body modifications."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "These modifications are called augmentations, allowing humans and even animals to seamlessly fuse with"
         puts "advanced mechanical and soft technologies."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Though a great advancement and step towards human evolution..."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "the doors of the underworld have been opened to black market and extremely dangerous augmentations..."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -110,15 +113,16 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Intro: Part 2".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You are a #{new_player.class_name.light_cyan} class special agent."
-        # sleep 1
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -141,23 +145,22 @@ module GameIntro
         puts "Intro: Part 3".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts "You are on a ferry toward Staten Island."
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts "Your brother, agent Henderson Caddel is already there and waiting at the"
         puts "rendezvous point to debrief you."
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts "Heavily armed and highly augmented terrorists have taken over the island."
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts "You have been deployed to investigate and neutralise the situation."
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        # sleep 1
+        sleep 1
         puts "It is 1:08am."
         puts InterfaceElements::INVISIBLE_SEPARATOR
-
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [

@@ -72,7 +72,7 @@ module Animations
         ]
 
         i = 1
-        while i < 5
+        while i < 3
             night_vision_array.each do | meter |
                 print meter + "\r"
                 sleep 0.2
@@ -190,7 +190,7 @@ module Animations
         
         ]
         i = 0
-        while i < 10
+        while i < 3
             alert_array.each do | alert |
                 sleep 0.1
                 puts alert

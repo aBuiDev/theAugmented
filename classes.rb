@@ -121,6 +121,9 @@ class CyberAssassin < PlayerClass
             health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 0},
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 1}
         ]
+        @inventory.each do | item |
+            @inventory_row << [item[:item_name], item[:quantity]]
+        end
         @weapons = [
             {weapon_name: "Nano Blade", ammo: 0, damage: 100}
         ]

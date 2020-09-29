@@ -48,7 +48,7 @@ module InterfaceElements
             {name: 'Exit Game', value: 3},
           ]
   
-        game_menu_user_selection = prompt.select("Game Menu:", game_menu_choices)
+        game_menu_user_selection = prompt.select("Game Menu:".light_cyan, game_menu_choices)
   
         case game_menu_user_selection
         when 1
@@ -75,7 +75,7 @@ module InterfaceElements
             {name: 'Use Power Charge', value: 2},
             {name: 'Close Inventory', value: 3},
         ]
-        inventory_command = prompt.select("Game Controls:", inventory_controls)
+        inventory_command = prompt.select("Game Controls:".light_cyan, inventory_controls)
 
         case inventory_command
 
@@ -103,6 +103,9 @@ module InterfaceElements
 
     # Rendezvous Game Controls
     def self.rendezvous_game_controls(new_player)
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         prompt = TTY::Prompt.new
         game_controls = [
             {name: 'Visit: Sewers', value: 1},
@@ -111,12 +114,16 @@ module InterfaceElements
             {name: 'View: Inventory Items', value: 4},
             {name: 'View: Weapons', value: 5},
         ]
-        continue_command = prompt.select("Game Controls:", game_controls)
+        continue_command = prompt.select("Game Controls:".light_cyan, game_controls)
 
         case continue_command
 
         when 1
-            GameLocations.location_sewers(new_player)
+            if new_player.weapon_name.include? "GEP Gun"
+                GameLocations.location_sewers_visited(new_player)
+            else
+                GameLocations.location_sewers(new_player)
+            end
         when 2
 
         when 3
@@ -142,17 +149,18 @@ module InterfaceElements
 
     # Sewers Game Controls
     def self.sewers_game_controls(new_player)
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         gep_gun = {weapon_name: "GEP Gun", ammo: 3, damange: 200}
         prompt = TTY::Prompt.new
         game_controls = [
             {name: 'Loot Mutated Sewer Rat Body', value: 1},
-            {name: 'Visit: Rendezvous', value: 2},
-            {name: 'Visit: Liberty Statue Head', value: 3},
-            {name: 'Visit: Statue Entrance', value: 4},
-            {name: 'View: Inventory Items', value: 5},
-            {name: 'View: Weapons', value: 6},
+            {name: 'Return: Rendezvous', value: 2},
+            {name: 'View: Inventory Items', value: 3},
+            {name: 'View: Weapons', value: 4},
         ]
-        continue_command = prompt.select("Game Controls:", game_controls)
+        continue_command = prompt.select("Game Controls:".light_cyan, game_controls)
 
         case continue_command   
         when 1
@@ -178,21 +186,16 @@ module InterfaceElements
                 InterfaceElements.sewers_game_controls(new_player)
             end
         when 2
-
+            GameLocations.location_rendezvous_visited(new_player) 
         when 3
-
-        when 4
-
-        when 5
             puts InterfaceElements::INVISIBLE_SEPARATOR
             new_player.view_inventory
             puts InterfaceElements::INVISIBLE_SEPARATOR
             InterfaceElements.sewers_game_controls(new_player)
             puts InterfaceElements::INVISIBLE_SEPARATOR
-        when 6
+        when 4
             puts InterfaceElements::INVISIBLE_SEPARATOR
             new_player.view_weapons
-            puts new_player.weapons
             puts InterfaceElements::INVISIBLE_SEPARATOR
             InterfaceElements.sewers_game_controls(new_player)
             puts InterfaceElements::INVISIBLE_SEPARATOR
