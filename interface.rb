@@ -125,9 +125,21 @@ module InterfaceElements
                 GameLocations.location_sewers(new_player)
             end
         when 2
-
+            if new_player.weapon_name.include? "GEP Gun"
+                GameLocations.liberty_statue_head(new_player)
+            else
+                GameLocations.liberty_statue_head_game_over(new_player)
+            end
         when 3
-
+            if new_player.weapon_name.include? "Sniper Rifle" && "GEP Gun"
+                GameLocations.location_statue_entrance_gep_sniper(new_player)
+            elsif new_player.weapon_name.include? "GEP Gun"
+                GameLocations.location_statue_entrance_gep(new_player)
+            elsif new_player.weapon_name.include? "Sniper Rifle"
+                GameLocations.location_statue_entrance_sniper(new_player)
+            else
+                GameLocations.location_statue_entrance_game_over(new_player)
+            end
         when 4
             puts InterfaceElements::INVISIBLE_SEPARATOR
             new_player.view_inventory
@@ -142,8 +154,6 @@ module InterfaceElements
             puts InterfaceElements::INVISIBLE_SEPARATOR
         end
     end
-
-
 
 
 

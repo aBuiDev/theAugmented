@@ -52,6 +52,10 @@ class PlayerClass
         @weapon_name << weapon[:weapon_name]
     end
 
+    def view_weapon_name
+        @weapon_name
+    end
+
 end
 
 
@@ -70,9 +74,11 @@ class MachineTank < PlayerClass
         end
         @weapons = [
             {weapon_name: "Sawed Off Shotgun", ammo: 10, damage: 50},
+            {weapon_name: "Sniper Rifle", ammo: 2, damage: 100}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
+            @weapon_name << [weapon[:weapon_name]]
         end
         @hit_points = 200
         @power_level = 100
@@ -102,6 +108,10 @@ class MachineTank < PlayerClass
         super
     end
 
+    def view_weapon_name
+        super
+    end
+
 end
 
 
@@ -125,10 +135,12 @@ class CyberAssassin < PlayerClass
             @inventory_row << [item[:item_name], item[:quantity]]
         end
         @weapons = [
-            {weapon_name: "Nano Blade", ammo: 0, damage: 100}
+            {weapon_name: "Nano Blade", ammo: 0, damage: 100},
+            {weapon_name: "Sniper Rifle", ammo: 2, damage: 100}
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
+            @weapon_name << [weapon[:weapon_name]]
         end
         @hit_points = 100
         @power_level = 200
@@ -158,6 +170,10 @@ class CyberAssassin < PlayerClass
         super
     end
 
+    def view_weapon_name
+        super
+    end
+
 end
 
 
@@ -176,5 +192,5 @@ class HermesHimler
     end
 end
 
-player = CyberAssassin.new("Andrew")
-puts player.weapons[0][:weapon_name].include? "GEP Gun"
+# player = CyberAssassin.new("Andrew")
+# puts player.weapon_name

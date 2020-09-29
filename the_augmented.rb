@@ -26,7 +26,7 @@ InterfaceElements::the_augmented_title
 
 sleep 1
 puts InterfaceElements::INVISIBLE_SEPARATOR
-Animations.loading_bar
+# Animations.loading_bar
 puts InterfaceElements::INVISIBLE_SEPARATOR
 puts InterfaceElements::INVISIBLE_SEPARATOR
 
