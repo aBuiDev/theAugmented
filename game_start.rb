@@ -35,7 +35,7 @@ module GameIntro
         puts InterfaceElements::VISIBLE_SEPARATOR
         # sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
+        puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin."
         # sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Machine Tanks can sustain more damage and are masters of long range weaponry, however, their movements are slower."
