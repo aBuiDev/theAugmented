@@ -152,7 +152,9 @@ module InterfaceElements
                 GameLocations.location_sewers(new_player)
             end
         when 2
-            if new_player.weapon_name.include? "GEP Gun"
+            if new_player.weapon_name.include? "GEP Gun" && "Sniper Rifle"
+                GameLocations.liberty_statue_head_visited(new_player)
+            elsif new_player.weapon_name.include? "GEP Gun"
                 GameLocations.liberty_statue_head(new_player)
             else
                 GameLocations.liberty_statue_head_game_over(new_player)
@@ -189,7 +191,7 @@ module InterfaceElements
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        gep_gun = {weapon_name: "GEP Gun", ammo: 3, damange: 200}
+        gep_gun = {weapon_name: "GEP Gun", ammo: 3, damage: 200}
         prompt = TTY::Prompt.new
         game_controls = [
             {name: 'Loot Mutated Sewer Rat Body', value: 1},
@@ -235,6 +237,80 @@ module InterfaceElements
             new_player.view_weapons
             puts InterfaceElements::INVISIBLE_SEPARATOR
             InterfaceElements.sewers_game_controls(new_player)
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+        end
+    end
+
+
+
+    # Statue Head Game Controls
+    def self.statue_head_game_controls(new_player)
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sniper_rifle = {weapon_name: "Sniper Rifle", ammo: 7, damage: 100}
+        prompt = TTY::Prompt.new
+        game_controls = [
+            {name: 'Loot Helena Hellspawn', value: 1},
+            {name: 'Return: Rendezvous', value: 2},
+            {name: 'Visit: Statue Entrance', value: 3},
+            {name: 'View: Inventory Items', value: 4},
+            {name: 'View: Weapons', value: 5},
+        ]
+        continue_command = prompt.select("Game Controls:".light_cyan, game_controls)
+
+        case continue_command
+
+        when 1
+            if new_player.weapon_name.include? "Sniper Rifle"
+                puts InterfaceElements::INVISIBLE_SEPARATOR
+                puts "Terrorist Sub-Commander Helena Hellspawn's body has already been looted."
+                puts InterfaceElements::INVISIBLE_SEPARATOR
+                sleep 1
+                InterfaceElements.statue_head_game_controls(new_player)
+            else
+                new_player.pickup_weapon(sniper_rifle)
+                new_player.add_weapon(sniper_rifle)
+                new_player.add_weapon_name(sniper_rifle)
+                puts InterfaceElements::INVISIBLE_SEPARATOR
+                puts "Upon inspection of Terrorist Sub-Commander Helena Hellspawn's body,"
+                puts "you discover a #{"Sniper Rifle".light_cyan}."
+                puts InterfaceElements::INVISIBLE_SEPARATOR
+                sleep 1
+                puts "You loot Terrorist Sub-Commander Helena Hellspawn's body.".yellow
+                puts InterfaceElements::INVISIBLE_SEPARATOR
+                sleep 1
+                puts ">> Sniper Rifle added to weapons <<".green
+                puts InterfaceElements::INVISIBLE_SEPARATOR
+                InterfaceElements.statue_head_game_controls(new_player)
+            end
+        when 2
+            GameLocations.location_rendezvous_visited_after_statue_head(new_player)
+        when 3
+            if new_player.weapon_name.include? "Sniper Rifle" && "GEP Gun"
+                puts "Boss fight with chance to win."
+                GameLocations.location_statue_entrance_gep_sniper(new_player)
+            elsif new_player.weapon_name.include? "GEP Gun"
+                puts "Losing boss fight with GEP Gun only."
+                GameLocations.location_statue_entrance_gep(new_player)
+            elsif new_player.weapon_name.include? "Sniper Rifle"
+                puts "Losing boss fight with Sniper Rifle Only."
+                GameLocations.location_statue_entrance_sniper(new_player)
+            else
+                puts "Losing boss fight with boss fight."
+                GameLocations.location_statue_entrance_game_over(new_player)
+            end
+        when 4
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            new_player.view_inventory
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.statue_head_game_controls(new_player)
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+        when 5
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            new_player.view_weapons
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.statue_head_game_controls(new_player)
             puts InterfaceElements::INVISIBLE_SEPARATOR
         end
     end

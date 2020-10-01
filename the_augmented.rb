@@ -14,7 +14,10 @@ require_relative './audio.rb'
 
 
 # Audio Track
-Audio.background_music_start
+Music.volume = 50
+song = Music.new('background_music.mp3')
+song.play
+
 
 
 

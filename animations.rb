@@ -205,8 +205,102 @@ module Animations
 
 
 
+    # Jump Rise Animation
+    def self.jump_rise
+        jump_rise_array = [
+            "
+                       .                     .    |                 .                             .        
+                               .                                                                           
+                                        .         ^        O          |   .                              . 
+                      .                                   /|\\     .                         .             
+                                              .      |    / \\                     .                       
+               .             .                                        ^       .                    .       
+                    .                                 .          |                                         
+            ",
+            "
+                       .                     .           |         .                              .        
+                               .                  |                   |                                    
+                                        .                  O              .                              . 
+                      .             ^                     /|\\     .           ^             .             
+                                              .           / \\                     .                       
+               .             .                       |                        .                    .       
+                    .                                 .                                                    
+            ",
+            "
+                       .                     .                  ^   .                             .        
+                               .                         |                                                 
+                                        .         |        O          |   .                              . 
+                      .                                   /|\\     .                         .             
+                                              .       ^   / \\                     .                       
+               .             .                                                .                    .       
+                    .                                |.                                                    
+            ",
+    
+        ]
+        i = 0
+        while i < 20
+            jump_rise_array.each do | rise |
+                sleep 0.05
+                puts rise
+                sleep 0.05
+                InterfaceElements.clear
+            end
+            i += 1
+        end
+    end
+    # Jump Rise Animation
+
+
+
+    # Jump Land Animation
+    def self.jump_land
+        jump_land_array = [
+            "
+                       .                     .    |                 .                             .        
+                               .                                                                           
+                                        .          v       O          |   .                              . 
+                      .                                   /|\\     .                         .             
+                                              .      |    / \\                     .                       
+               .             .                                       v        .                    .       
+                    .                                 .          |                                         
+            ",
+            "
+                       .                     .                     .  |     v                     .        
+                               .                                                                           
+                                        .        v         O              .                              . 
+                      .                              |    /|\\     .                         .             
+                                              .           / \\                     .                       
+               .             .                                   |            .                    .       
+                    .                                 .                                                    
+            ",
+            "
+                       .                     .                      .                             .        
+                               .                                      v                                    
+                                        .            |     O              .                              . 
+                      .                                   /|\\     .                         .             
+                                              .           / \\    |                 .                       
+               .             .                                                .                    .       
+                    .                            v    .                                                    
+            ",
+    
+        ]
+        i = 0
+        while i < 20
+            jump_land_array.each do | rise |
+                sleep 0.05
+                puts rise
+                sleep 0.05
+                InterfaceElements.clear
+            end
+            i += 1
+        end
+    end
+    # Jump Land Animation
+
+
 
 end
+
 
  
 

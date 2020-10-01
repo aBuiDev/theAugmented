@@ -64,7 +64,6 @@ class MachineTank < PlayerClass
         @class_name = "machine tank"
         @inventory = [
             health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 1},
-            power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 0}
         ]
         @inventory.each do | item |
             @inventory_row << [item[:item_name], item[:quantity]]
@@ -120,14 +119,13 @@ class CyberAssassin < PlayerClass
         super(player_name)
         @class_name = "cyber assassin"
         @inventory = [
-            health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 0},
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 1}
         ]
         @inventory.each do | item |
             @inventory_row << [item[:item_name], item[:quantity]]
         end
         @weapons = [
-            {weapon_name: "Nano Blade", ammo: 0, damage: 100},
+            {weapon_name: "Nano Blade", ammo: "N/A", damage: 100},
         ]
         @weapons.each do | weapon |
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]

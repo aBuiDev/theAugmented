@@ -48,6 +48,28 @@ module GameLocations
 
 
 
+    # Location: Rendezvuos Visited
+    def self.location_rendezvous_visited_after_statue_head(new_player)
+        InterfaceElements.clear
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The Rendezvous".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You return the to rendezvous area..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "however, Henderson is engaged in a massive battle with"
+        puts "Terrorist Commander Hermes Himler at the statue entrance!"
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        # Interface Controls --------------------------------------------------------------------
+        InterfaceElements.rendezvous_game_controls(new_player)
+    end
+
+
+
     # Location: Sewers
     def self.location_sewers(new_player)
         InterfaceElements.clear
@@ -143,9 +165,54 @@ module GameLocations
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Liberty Statue Head..."
         sleep 1
-        InterfaceElements.rendezvous_game_controls(new_player)
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        sleep 4
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        Animations.jump_rise
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        sleep 4
+        Animations.jump_land
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        InterfaceElements.statue_head_game_controls(new_player)
     end
 
 
@@ -158,9 +225,54 @@ module GameLocations
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Liberty Statue Head Game Over..."
         sleep 1
-        InterfaceElements.rendezvous_game_controls(new_player)
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        sleep 4
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        Animations.jump_rise
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        sleep 4
+        Animations.jump_land
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        InterfaceElements.statue_head_game_controls(new_player)
     end
 
 
@@ -173,9 +285,64 @@ module GameLocations
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Liberty Statue Head Visited..."
         sleep 1
-        InterfaceElements.rendezvous_game_controls(new_player)
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        sleep 4
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        Animations.jump_rise
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        sleep 4
+        Animations.jump_land
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "There doesn't seem to be much to do here. Terrorist Sub-Commander Helena Hellspawn lays lifeless..."
+        puts "half of her body hanging over one of the liberty crown's spikes"
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Your brother is still engaged in a deadly augmented battle with Hermes Himler..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You can feel the impact of their war resonate up the liberty tower of which you stand."
+        InterfaceElements.statue_head_game_controls(new_player)
     end
 
 
