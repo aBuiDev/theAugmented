@@ -5,6 +5,10 @@
 
 <br>
 
+![The-Augmented-Cover-Image](./the_augmented_cover_image.jpg)
+
+<br>
+
 ## Table of Contents
 - [Links](###Links)
 - [Development, Purpose & Scope](###Development,-Purpose-&-Scope)

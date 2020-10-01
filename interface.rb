@@ -1,3 +1,5 @@
+
+
 # Game Interface
 module InterfaceElements
     VISIBLE_SEPARATOR = "----------------------------------------------------------------------------------------------------------".light_cyan
@@ -70,8 +72,7 @@ module InterfaceElements
         game_menu_choices = [
             {name: 'Start Game', value: 1},
             {name: 'About The Augmented', value: 2},
-            {name: 'Stop Music', value: 3},
-            {name: 'Exit Game', value: 4}
+            {name: 'Exit Game', value: 3}
           ]
   
         game_menu_user_selection = prompt.select("Game Menu:".light_cyan, game_menu_choices)
@@ -84,8 +85,6 @@ module InterfaceElements
             InterfaceElements.clear
             InterfaceElements.about_the_augmented
         when 3
-            Audio.background_music_stop
-        when 4
             puts "Thank you for playing The Augmented"
         end
     end

@@ -12,8 +12,6 @@ module Audio
     def self.background_music_stop
         song = Music.new('background_music.mp3')
         song.stop
-        InterfaceElements.the_augmented_title
-        InterfaceElements.game_menu
     end
 
 end

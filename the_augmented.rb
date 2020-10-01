@@ -13,7 +13,7 @@ require_relative './audio.rb'
 
 
 
-# Initialise Background Music
+# Audio Track
 Audio.background_music_start
 
 
