@@ -138,7 +138,7 @@ module GameLocations
         InterfaceElements.clear
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "The Sewers".light_cyan
+        puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head..."
@@ -183,7 +183,7 @@ module GameLocations
         InterfaceElements.clear
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Liberty Statue Head".light_cyan
+        puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Statue Entrance Game Over..."
