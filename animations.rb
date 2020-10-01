@@ -152,6 +152,7 @@ module Animations
                 i += 1
             end
         end
+        print "\r"      
     end
     # Loading Bar Animation
 

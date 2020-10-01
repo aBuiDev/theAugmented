@@ -70,7 +70,8 @@ module InterfaceElements
         game_menu_choices = [
             {name: 'Start Game', value: 1},
             {name: 'About The Augmented', value: 2},
-            {name: 'Exit Game', value: 3},
+            {name: 'Stop Music', value: 3},
+            {name: 'Exit Game', value: 4}
           ]
   
         game_menu_user_selection = prompt.select("Game Menu:".light_cyan, game_menu_choices)
@@ -80,10 +81,12 @@ module InterfaceElements
           InterfaceElements.clear
           GameIntro.player_name
         when 2
-          InterfaceElements.clear
-          InterfaceElements.about_the_augmented
+            InterfaceElements.clear
+            InterfaceElements.about_the_augmented
         when 3
-          puts "Thank you for playing The Augmented"
+            Audio.background_music_stop
+        when 4
+            puts "Thank you for playing The Augmented"
         end
     end
 

@@ -13,3 +13,5 @@ gem "terminal-table", "~> 1.8"
 gem "tty-prompt", "~> 0.22.0"
 
 gem "rspec", "~> 3.9"
+
+gem "ruby2d", "~> 0.9.4"
