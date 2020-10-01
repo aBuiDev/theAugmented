@@ -34,7 +34,31 @@ module InterfaceElements
     end
 
     def self.about_the_augmented
-        puts "The Augmented is a text-based game that will prompt users to make emotionally driven decisions that will affect the story's outcome. The Augmented is an action RPG set in the year 2088 where humanity has begun to advance the technologies of being able to transpose machine with man via body augmentations. The Augmented universe is based loosely on Eidos' original Deus Ex PC game. The Augmented will take place in New York, on Staten Island - after highly trained and highly advanced unknown terrorists destroy the statue of liberty. The player will take on the role of Agent Caddel, a highly trained and heavily augmented CIA agent - because his body is now over 75% machine, he also fights an internal battle of self-discovery and self-identity."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "About The Augmented".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The Augmented is a text-based game that will prompt users to make emotionally driven decisions that" 
+        puts "will affect the story's outcome." 
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The Augmented is an action RPG set in the year 2088 where humanity has begun to advance the technologies"
+        puts "of being able to transpose machine with man via body augmentations."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The Augmented universe is based loosely on Eidos' original Deus Ex PC game."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The Augmented will take place in New York, on Staten Island - after highly trained and highly advanced"
+        puts "unknown terrorists destroy the statue of liberty." 
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The player will take on the role of Agent Caddel, a highly trained and heavily augmented CIA agent..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Because his body is now over 75% machine, he also fights an internal battle of"
+        puts "self-discovery and self-identity."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         InterfaceElements.game_menu
     end
 
