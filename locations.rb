@@ -429,6 +429,17 @@ module GameLocations
         sleep 1
         puts "Before your vision fades, you see Terrorist Sub-Commander, Helena Hellspawn..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Continue', value: 1},
+        ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            InterfaceElements.game_over
+        end
     end
 
 

@@ -320,5 +320,28 @@ module InterfaceElements
 
 
 
+    def self.game_over
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts ""
+        puts ""
+        puts ""
+        puts " _______  _______  __   __  _______    _______  __   __  _______  ______    ".red
+        puts "|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |   ".red
+        puts "|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||   ".red
+        puts "|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_  ".red
+        puts "|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  | ".red
+        puts "|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | | ".red
+        puts "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_| ".red
+        puts ""
+        puts ""
+        puts "                         Run the Game to Play Again                         ".light_cyan
+        puts ""
+        puts ""
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+    end
+
 
 end
