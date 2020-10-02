@@ -286,10 +286,6 @@ module GameLocations
         puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
-        puts "critically damaged and unconscious brother..."
-        sleep 1
-        puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
@@ -309,6 +305,55 @@ module GameLocations
 
     # Location: Statue Entrance Game Over Part Four
     def self.location_statue_entrance_gep_part_four(new_player)
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Statue Entrance".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "In an act of desperation - whilst in mid air - you take out the #{"GEP Gun".light_cyan} you picked up"
+        puts "from the mutated and augmented sewer rat..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you take aim and fire a guided explosive projectile at Hermes Himler..."
+        sleep 1
+        Animations.rocket_launch
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Statue Entrance".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "In an act of desperation - whilst in mid air - you take out the #{"GEP Gun".light_cyan} you picked up"
+        puts "from the mutated and augmented sewer rat..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you take aim and fire a guided explosive projectile at Hermes Himler..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "without flinching, Terrorist Commander Hermes Himler, easily deflects the projectile..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
+        puts "critically damaged and unconscious brother..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Continue', value: 1},
+        ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            GameLocations.location_statue_entrance_gep_part_five(new_player)
+        end
+    end
+
+
+
+    # Location: Statue Entrance Game Over Part Five
+    def self.location_statue_entrance_gep_part_five(new_player)
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Statue Entrance".light_cyan
@@ -337,14 +382,14 @@ module GameLocations
         # Control Conditionals ------------------------------------------------------------------
         case continue_command
         when 1
-            GameLocations.location_statue_entrance_gep_part_five(new_player)
+            GameLocations.location_statue_entrance_gep_part_six(new_player)
         end
     end
 
 
 
-    # Location: Statue Entrance Game Over Part Five
-    def self.location_statue_entrance_gep_part_five(new_player)
+    # Location: Statue Entrance Game Over Part Six
+    def self.location_statue_entrance_gep_part_six(new_player)
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Statue Entrance".light_cyan

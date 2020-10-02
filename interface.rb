@@ -315,8 +315,6 @@ module InterfaceElements
         puts ""
         puts ""
         puts ""
-        puts ""
-        puts ""
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -357,14 +355,16 @@ module InterfaceElements
         puts "         | |  |  __  | / /\\ \\ | . ` |  <     \\   /| |  | | |  | |            ".light_cyan
         puts "         | |  | |  | |/ ____ \\| |\\  | . \\     | | | |__| | |__| |            ".light_cyan
         puts "  ______ |_|_ |_|__|_/_/____\\_\\_| \\_|_|\\_\\ __ |_| _\____/ \\____/ _____    ".light_cyan
-        puts " |  ____/ __ \\|  __ \\  |  __ \\| |        /\\ \   / /_   _| \\ | |/ ____|     ".light_cyan
-        puts " | |__ | |  | | |__) | | |__) | |       /  \\ \_/ /  | | |  \\| | |  __         ".light_cyan
-        puts " |  __|| |  | |  _  /  |  ___/| |      / /\\\\   /   | | | . ` | | |_ |         ".light_cyan
-        puts " | |   | |__| | | \\ \\  | |    | |____ / ____\\| |   _| |_| |\\  | |__| |      ".light_cyan
+        puts " |  ____/ __ \\|  __ \\  |  __ \\| |        /\\ \\   / /_   _| \\ | |/ ____|    ".light_cyan
+        puts " | |__ | |  | | |__) | | |__) | |       /  \\ \_/   /  | | |  \\| | |  __       ".light_cyan
+        puts " |  __|| |  | |  _  /  |  ___/| |      / /\\ \\    /   | | | . ` | | |_ |       ".light_cyan
+        puts " | |   | |__| | | \\ \\  | |    | |____ / ____ \\| |   _| |_| |\\  | |__| |     ".light_cyan
         puts " |_|    \\____/|_|  \\_\\ |_|    |______/_/    \\_\\_|  |_____|_| \\_|\_____|   ".light_cyan
         puts ""
         puts ""
-        puts ""                                                          
+        puts "                            The Augmented by @aBuiDev                           ".green     
+        puts ""   
+        puts ""                                                        
     end
 
 

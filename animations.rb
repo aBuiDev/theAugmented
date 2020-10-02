@@ -365,5 +365,33 @@ module Animations
 
 
 
+    # Rocket Animation
+    def self.rocket_launch
+        rocket_launch_array = [
+            "- >} [=  =  =]>                                                                                                ".blue,
+            "            - >} [=  =  =]>                                                                                    ".light_blue,
+            "                        - >} [=  =  =]>                                                                        ".blue,
+            "                                    - >} [=  =  =]>                                                            ".light_blue,
+            "                                                - >} [=  =  =]>                                                ".blue,
+            "                                                            - >} [=  =  =]>                                    ".light_blue,
+            "                                                                        - >} [=  =  =]>                        ".blue,
+            "                                                                                    - >} [=  =  =]>            ".light_blue,
+            "                                                                                                - >} [=  =  =]>".blue,
+
+        ]
+
+        i = 1
+        while i < 1
+            rocket_launch_array.each do | meter |
+                print meter + "\r"
+                sleep 0.2
+            end
+            i += 1
+        end
+    end
+    # Rocket Animation
+
+
+
 end
 

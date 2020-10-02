@@ -184,6 +184,8 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -417,6 +419,8 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "Before your vision fades, you see Terrorist Sub-Commander, Helena Hellspawn..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
