@@ -76,8 +76,8 @@ class MachineTank < PlayerClass
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
             @weapon_name << [weapon[:weapon_name]]
         end
-        @hit_points = 200
-        @power_level = 100
+        @hit_points = 0
+        @power_level = 0
         @augmentations = []
     end
 
@@ -103,6 +103,10 @@ class MachineTank < PlayerClass
 
     def add_weapon_name(weapon)
         super
+    end
+
+    def hit_points
+        @hit_points = 100
     end
 
     def attacks
@@ -141,8 +145,8 @@ class CyberAssassin < PlayerClass
             @weapon_row << [weapon[:weapon_name], weapon[:ammo]]
             @weapon_name << [weapon[:weapon_name]]
         end
-        @hit_points = 100
-        @power_level = 200
+        @hit_points = 0
+        @power_level = 0
         @augmentations = []
     end
 
@@ -168,6 +172,10 @@ class CyberAssassin < PlayerClass
 
     def add_weapon_name(weapon)
         super
+    end
+
+    def hit_points
+        @hit_points = 100
     end
 
     def attacks

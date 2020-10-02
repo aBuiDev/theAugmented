@@ -1,3 +1,7 @@
+require_relative './models/boss_fight/boss_fight.rb'
+
+
+
 module GameLocations
      # Location: Statue Entrance Game Over ----------------------------------------------------------------------------- |
      def self.location_statue_entrance_game_over(new_player)
@@ -704,14 +708,7 @@ module GameLocations
 
     # Location: Statue Entrance GEP Sniper Fight ----------------------------------------------------------------------- |
     def self.location_statue_entrance_gep_sniper(new_player)
-        InterfaceElements.clear
-        sleep 1
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Statue Entrance".light_cyan
-        puts InterfaceElements::VISIBLE_SEPARATOR
-        puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Statue Entrance GEP Sniper Fight..."
-        sleep 1
+        EpicBossFight.battle_time(new_player)
         InterfaceElements.rendezvous_game_controls(new_player)
     end
 end

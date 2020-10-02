@@ -1,11 +1,10 @@
 # Bosses 
 class HermesHimler
     attr_reader :boss_name, :attacks
-    attr_accessor :hit_points
-    def initialize(name)
-        @boss_name = name
+    attr_accessor :hit_points, :power_level
+    def initialize
         @hit_points = 0
-        @power_level = 100
+        @power_level = 0
         @augmentations = []
     end
 
@@ -13,25 +12,28 @@ class HermesHimler
         puts name
     end
 
+    def self.hit_points
+        @hit_points = 100
+    end
+
     def self.attacks
         @augmentations = [
-            {move: "| Kinetic Titan Slam Augmentation |", damage: 20, energy: 25},
-            {move: "| Plasma Whip Augmentation |", damage: 20, energy: 25},
-            {move: "| Gravity Defence Augmentation |", damage: 0, energy: 25}
+            "| Kinetic Titan Slam Augmentation |", # Paper
+            "| Plasma Whip Augmentation |",  # Scissors
+            "| Gravity Defence Augmentation |" # Rock
         ]
     end
 
     def self.attack
         random_number = rand 1..3
         if random_number == 1
-            HermesHimler.attacks[0][:move]
+            "| Kinetic Titan Slam Augmentation |"
         elsif random_number == 2
-            HermesHimler.attacks[1][:move]
+            "| Plasma Whip Augmentation |"
         elsif random_number == 3
-            HermesHimler.attacks[2][:move]
+            "| Gravity Defence Augmentation |"
         end
     end
 
 end
-
 

@@ -3,6 +3,7 @@
 # Game Interface
 module InterfaceElements
     VISIBLE_SEPARATOR = "----------------------------------------------------------------------------------------------------------".light_cyan
+    SPECIAL_SEPARATOR = "----------------------------------------------------------------------------------------------------------".yellow
     INVISIBLE_SEPARATOR = " "
 
     def self.clear
@@ -371,5 +372,5 @@ module InterfaceElements
     end
 
 
-    
+
 end
