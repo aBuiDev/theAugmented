@@ -337,10 +337,57 @@ module InterfaceElements
         puts "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_| ".red
         puts ""
         puts ""
-        puts "                         Run the Game to Play Again                         ".light_cyan
+        puts ""
         puts ""
         puts ""
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Restart Game', value: 1},
+            {name: 'Exit Game', value: 2},
+          ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            InterfaceElements.clear
+            InterfaceElements::the_augmented_title
+            sleep 1
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            Animations.loading_bar
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.game_menu
+        when 2
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts InterfaceElements::VISIBLE_SEPARATOR
+            puts InterfaceElements.thank_you
+            puts InterfaceElements::VISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+        end
+    end
+
+    def self.thank_you
+        puts ""
+        puts ""
+        puts ""
+        puts "       _______ _    _          _   _ _  __ __     ______  _    _                ".light_cyan
+        puts "      |__   __| |  | |   /\\   | \\ | | |/ / \\ \\   / / __ \\| |  | |          ".light_cyan
+        puts "         | |  | |__| |  /  \\  |  \\| | ' /   \\ \\_/ / |  | | |  | |           ".light_cyan
+        puts "         | |  |  __  | / /\\ \\ | . ` |  <     \\   /| |  | | |  | |            ".light_cyan
+        puts "         | |  | |  | |/ ____ \\| |\\  | . \\     | | | |__| | |__| |            ".light_cyan
+        puts "  ______ |_|_ |_|__|_/_/____\\_\\_| \\_|_|\\_\\ __ |_| _\____/ \\____/ _____    ".light_cyan
+        puts " |  ____/ __ \\|  __ \\  |  __ \\| |        /\\ \   / /_   _| \\ | |/ ____|     ".light_cyan
+        puts " | |__ | |  | | |__) | | |__) | |       /  \\ \_/ /  | | |  \\| | |  __         ".light_cyan
+        puts " |  __|| |  | |  _  /  |  ___/| |      / /\\\\   /   | | | . ` | | |_ |         ".light_cyan
+        puts " | |   | |__| | | \\ \\  | |    | |____ / ____\\| |   _| |_| |\\  | |__| |      ".light_cyan
+        puts " |_|    \\____/|_|  \\_\\ |_|    |______/_/    \\_\\_|  |_____|_| \\_|\_____|   ".light_cyan
+        puts ""
+        puts ""
+        puts ""                                                          
     end
 
 

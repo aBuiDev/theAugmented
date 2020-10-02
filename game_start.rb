@@ -99,7 +99,7 @@ module GameIntro
         prompt = TTY::Prompt.new
         continue_only = [
             {name: 'Continue', value: 1},
-            {name: 'Back to Class Selection', value: 2},
+            {name: 'Reset', value: 2},
           ]
         continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
 
@@ -108,7 +108,14 @@ module GameIntro
         when 1
             GameIntro.story_intro_part_two(new_player)
         when 2
-            GameIntro.player_class(player_name)
+            InterfaceElements.clear
+            InterfaceElements::the_augmented_title
+            sleep 1
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            Animations.loading_bar
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.game_menu
         end
     end
 
@@ -133,7 +140,7 @@ module GameIntro
         prompt = TTY::Prompt.new
         continue_only = [
             {name: 'Continue', value: 1},
-            {name: 'Back to Class Selection', value: 2},
+            {name: 'Reset', value: 2},
           ]
         continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
 
@@ -142,7 +149,14 @@ module GameIntro
         when 1
             GameIntro.story_intro_part_three(new_player)
         when 2
-            GameIntro.player_class(player_name)
+            InterfaceElements.clear
+            InterfaceElements::the_augmented_title
+            sleep 1
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            Animations.loading_bar
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            InterfaceElements.game_menu
         end
     end
 
