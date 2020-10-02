@@ -13,7 +13,7 @@ require_relative './interface.rb'
 # Player Classes
 class PlayerClass
     attr_accessor :name, :inventory, :inventory_row, :weapons, :weapon_row, :weapon_name, :quest_items, :hit_points, :power_level
-    attr_reader :class_name 
+    attr_reader :class_name, :augmentations
     def initialize(player_name)
         @class_name = class_name
         @name = player_name
@@ -25,6 +25,7 @@ class PlayerClass
         @quest_items = []
         @hit_points = 100
         @power_level = 100
+        @augmentations = []
     end
 
     def view_inventory
@@ -77,6 +78,7 @@ class MachineTank < PlayerClass
         end
         @hit_points = 200
         @power_level = 100
+        @augmentations = []
     end
 
     def view_inventory
@@ -101,6 +103,14 @@ class MachineTank < PlayerClass
 
     def add_weapon_name(weapon)
         super
+    end
+
+    def attacks
+        @augmentations = [
+            {move: "| Mecha Force Charge Augmentation |", damage: 20, energy: 25},
+            {move: "| Nano Arm Blade Augmentation |", damage: 20, energy: 25},
+            {move: "| Titan Shield Augmentation |", damage: 0, energy: 25}
+        ]
     end
 
 end
@@ -133,6 +143,7 @@ class CyberAssassin < PlayerClass
         end
         @hit_points = 100
         @power_level = 200
+        @augmentations = []
     end
 
     def view_inventory
@@ -157,6 +168,14 @@ class CyberAssassin < PlayerClass
 
     def add_weapon_name(weapon)
         super
+    end
+
+    def attacks
+        @augmentations = [
+            {move: "| Gravity Force Augmentation |", damage: 20, energy: 25},
+            {move: "| Nano Arm Blade Augmentation |", damage: 20, energy: 25},
+            {move: "| Titan Shield Augmentation |", damage: 0, energy: 25}
+        ]
     end
 
 end
