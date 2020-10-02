@@ -1,5 +1,5 @@
 module GameLocations
-    # Location: Liberty Statue Head
+    # Location: Liberty Statue Head  ----------------------------------------------------------------------------------- |
     def self.liberty_statue_head(new_player)
         InterfaceElements.clear
         sleep 1
@@ -86,7 +86,7 @@ module GameLocations
 
 
 
-    # Location: Liberty Statue Head Game Over
+    # Location: Liberty Statue Head Game Over -------------------------------------------------------------------------- |
     def self.liberty_statue_head_game_over(new_player)
         InterfaceElements.clear
         sleep 1
@@ -286,7 +286,7 @@ module GameLocations
 
 
 
-    # Location: Liberty Statue Head Visited
+    # Location: Liberty Statue Head Visited  --------------------------------------------------------------------------- |
     def self.liberty_statue_head_visited(new_player)
         InterfaceElements.clear
         sleep 1
@@ -350,7 +350,7 @@ module GameLocations
         puts "Your brother is still engaged in a deadly augmented battle with Hermes Himler..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You can feel the impact of their war resonate up the liberty tower of which you stand."
+        puts "You can feel the impact of their war resonate up the liberty tower for which you stand."
         InterfaceElements.statue_head_game_controls(new_player)
     end
 end
