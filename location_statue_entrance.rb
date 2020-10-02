@@ -24,6 +24,8 @@ module GameLocations
         puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to your injured brother..." 
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -60,6 +62,9 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -91,12 +96,14 @@ module GameLocations
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "lifting everything in the area, including you and your brother into the air and slamming"
-        puts "everything and everyone onto the ground generating a massive shockwave..."
+        puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
         puts "critically damaged and unconscious brother..."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
@@ -126,11 +133,13 @@ module GameLocations
         puts "Hermes Himler looks down at you both..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "his arms tranforming into thermal rail cannons using #{"| Thermal Rail Cannon Augmentation|".red}..."
+        puts "his arms tranforming into thermal rail cannons using #{"| Thermal Rail Cannon Augmentation |".red}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "with both arms pointed directly at the center of your visions..."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
@@ -159,6 +168,8 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "...it all goes to silence..."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
@@ -200,6 +211,8 @@ module GameLocations
         puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to your injured brother..." 
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -236,6 +249,9 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         continue_only = [
@@ -267,12 +283,14 @@ module GameLocations
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "lifting everything in the area, including you and your brother into the air and slamming"
-        puts "everything and everyone onto the ground generating a massive shockwave..."
+        puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
         puts "critically damaged and unconscious brother..."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
@@ -302,11 +320,13 @@ module GameLocations
         puts "Hermes Himler looks down at you both..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "his arms tranforming into thermal rail cannons using #{"| Thermal Rail Cannon Augmentation|".red}..."
+        puts "his arms tranforming into thermal rail cannons using #{"| Thermal Rail Cannon Augmentation |".red}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "with both arms pointed directly at the center of your visions..."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
@@ -330,11 +350,13 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "...without a word..."
+        puts "... without a word ..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "...it all goes to silence..."
+        puts "... it all goes to silence ..."
         sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new

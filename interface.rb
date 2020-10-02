@@ -99,25 +99,6 @@ module InterfaceElements
         puts InterfaceElements::INVISIBLE_SEPARATOR
         new_player.view_inventory
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        prompt = TTY::Prompt.new
-        inventory_controls = [
-            {name: 'Use Health Kit', value: 1},
-            {name: 'Use Power Charge', value: 2},
-            {name: 'Close Inventory', value: 3},
-        ]
-        inventory_command = prompt.select("Game Controls:".light_cyan, inventory_controls)
-
-        case inventory_command
-
-        when 1
-
-        when 2
-
-        when 3
-
-
-
-        end
     end
 
 
@@ -163,7 +144,7 @@ module InterfaceElements
                 GameLocations.liberty_statue_head_game_over(new_player)
             end
         when 3
-            if new_player.weapon_name.include? "Sniper Rifle" && "GEP Gun"
+            if new_player.weapon_name.include? "GEP Gun" && "Sniper Rifle"
                 GameLocations.location_statue_entrance_gep_sniper(new_player)
             elsif new_player.weapon_name.include? "GEP Gun"
                 GameLocations.location_statue_entrance_gep(new_player)
@@ -258,7 +239,7 @@ module InterfaceElements
             {name: 'Return: Rendezvous', value: 2},
             {name: 'Visit: Statue Entrance', value: 3},
             {name: 'View: Inventory Items', value: 4},
-            {name: 'View: Weapons', value: 5},
+            {name: 'View: Weapons', value: 5},      
         ]
         continue_command = prompt.select("Game Controls:".light_cyan, game_controls)
 
@@ -290,17 +271,13 @@ module InterfaceElements
         when 2
             GameLocations.location_rendezvous_visited_after_statue_head(new_player)
         when 3
-            if new_player.weapon_name.include? "Sniper Rifle" && "GEP Gun"
-                puts "Boss fight with chance to win."
+            if new_player.weapon_name.include? "GEP Gun" && "Sniper Rifle"
                 GameLocations.location_statue_entrance_gep_sniper(new_player)
             elsif new_player.weapon_name.include? "GEP Gun"
-                puts "Losing boss fight with GEP Gun only."
-                GameLocations.location_statue_entrance_gep(new_player)
+                GameLocations.location_statue_entrance_gep(new_player)  
             elsif new_player.weapon_name.include? "Sniper Rifle"
-                puts "Losing boss fight with Sniper Rifle Only."
                 GameLocations.location_statue_entrance_sniper(new_player)
             else
-                puts "Losing boss fight with boss fight."
                 GameLocations.location_statue_entrance_game_over(new_player)
             end
         when 4
