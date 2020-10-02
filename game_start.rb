@@ -6,7 +6,10 @@ require 'terminal-table'
 require_relative './animations.rb'
 require_relative './classes.rb'
 require_relative './interface.rb'
-require_relative './locations.rb'
+require_relative './location_rendezvous.rb'
+require_relative './location_sewers.rb'
+require_relative './location_statue_entrance.rb'
+require_relative './location_statue_head.rb'
 
 
 # Story Elements Module
