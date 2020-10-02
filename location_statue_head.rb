@@ -2,7 +2,6 @@ module GameLocations
     # Location: Liberty Statue Head  ----------------------------------------------------------------------------------- |
     def self.liberty_statue_head(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -113,7 +112,6 @@ module GameLocations
     # Location: Liberty Statue Head Game Over Part Two
     def self.liberty_statue_head_part_two(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -161,7 +159,6 @@ module GameLocations
     def self.liberty_statue_head_part_three(new_player)
         InterfaceElements.clear
         Animations.alert_animation
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -204,7 +201,6 @@ module GameLocations
     def self.liberty_statue_head_part_four(new_player)
         InterfaceElements.clear
         Animations.alert_animation
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -243,7 +239,6 @@ module GameLocations
     # Location: Liberty Statue Head Game Over -------------------------------------------------------------------------- |
     def self.liberty_statue_head_game_over(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -353,7 +348,6 @@ module GameLocations
     # Location: Liberty Statue Head Game Over Part Two
     def self.liberty_statue_head_game_over_part_two(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -400,7 +394,6 @@ module GameLocations
     # Location: Liberty Statue Head Game Over Part Two
     def self.liberty_statue_head_game_over_part_three(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -443,7 +436,6 @@ module GameLocations
     # Location: Liberty Statue Head Visited  --------------------------------------------------------------------------- |
     def self.liberty_statue_head_visited(new_player)
         InterfaceElements.clear
-        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Liberty Statue Head".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
