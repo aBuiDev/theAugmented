@@ -326,7 +326,109 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "and scan the surrounding area from this vantage point."
         sleep 1
-        InterfaceElements.statue_head_game_controls(new_player)
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "#{"| Eagle Eye Vision Augmentation |".green} locks onto Henderson!,"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "who is engaged in an earth-shattering augmented battle with Terrorist Commander Hermes Himler..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "an extremely brutal and ultra-augmented enemy of the world."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "It is rumoured that only 35% of his brain remains human."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Continue', value: 1},
+        ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            GameLocations.liberty_statue_head_game_over_part_two(new_player)
+        end
+    end
+
+    # Location: Liberty Statue Head Game Over Part Two
+    def self.liberty_statue_head_game_over_part_two(new_player)
+        InterfaceElements.clear
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Henderson is also a #{new_player.class_name.light_cyan} class, super-agent..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "however, he alone cannot defeat Terrorist Commander Hermes Himler..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "At least two of you, heavy weaponry and pure grit will be needed to defeat Himler."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You have no weapons..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "however, you have no other option but to aid Henderson."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You activate #{"| Nano Teleportation Augmentation |".light_cyan}"
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Continue', value: 1},
+        ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            GameLocations.liberty_statue_head_game_over_part_three(new_player)
+        end
+    end
+
+    # Location: Liberty Statue Head Game Over Part Two
+    def self.liberty_statue_head_game_over_part_three(new_player)
+        InterfaceElements.clear
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Upon engaging #{"| Nano Teleportation Augmentation |".light_cyan}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Your systems are abruptly shut down and you fall heavily in a clanking slump..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "you feel as though the weight of your augmented body is being dragged to the core of"
+        puts "the earth by gravity."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "You lay paralyzed as your systems begin to shut down..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "As the power drains away from your electronics, so does the life force of whatever little"
+        puts "is still human in your body..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
+        puts "Before your vision fades, you see Terrorist Sub-Commander, Helena Hellspawn..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
     end
 
 
