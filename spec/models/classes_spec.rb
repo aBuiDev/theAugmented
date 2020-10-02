@@ -14,7 +14,7 @@ RSpec.describe CyberAssassin do
     it 'Should create' do
         new_player = CyberAssassin.new("Andrew")
         expect(new_player.weapons).to eq [
-            {weapon_name: "Nano Blade", ammo: 0, damage: 100}
+            {weapon_name: "Nano Blade", ammo: "N/A", damage: 100}
         ]
     end
 end

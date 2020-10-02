@@ -85,7 +85,10 @@ module InterfaceElements
             InterfaceElements.clear
             InterfaceElements.about_the_augmented
         when 3
+            InterfaceElements.clear
+            puts InterfaceElements::INVISIBLE_SEPARATOR
             puts "Thank you for playing The Augmented"
+            puts InterfaceElements::INVISIBLE_SEPARATOR
         end
     end
 

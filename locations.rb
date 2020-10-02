@@ -212,6 +212,33 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
         puts "statue's head."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Upon your landing, you activate #{"| Eagle Eye Vision Augmentation |".green}"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "and scan the surrounding area from this vantage point."
+        sleep 1
+        Animations.eagle_vision_scanner
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Upon your landing, you activate #{"| Eagle Eye Vision Augmentation |".green}"
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "and scan the surrounding area from this vantage point."
+        sleep 1
         InterfaceElements.statue_head_game_controls(new_player)
     end
 
@@ -272,13 +299,33 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
         puts "statue's head."
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Upon your landing, you activate #{"| Eagle Eye Vision Augmentation |".green}"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "and scan the surrounding area from this vantage point."
         sleep 1
-        Animation.eagle_vision_scanner
+        Animations.eagle_vision_scanner
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Liberty Statue Head".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Klipzpringer 00-8-00 Jump Augmentation |".green}..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "electro-magnetic-anti-gravity force builds up around your legs..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "the ground below you rumbles..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
+        puts "statue's head."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Upon your landing, you activate #{"| Eagle Eye Vision Augmentation |".green}"
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "and scan the surrounding area from this vantage point."
+        sleep 1
         InterfaceElements.statue_head_game_controls(new_player)
     end
 
