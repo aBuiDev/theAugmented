@@ -377,19 +377,45 @@ module Animations
             "                                                                        - >} [=  =  =]>                        ".blue,
             "                                                                                    - >} [=  =  =]>            ".light_blue,
             "                                                                                                - >} [=  =  =]>".blue,
-
         ]
 
         i = 1
-        while i < 1
-            rocket_launch_array.each do | meter |
-                print meter + "\r"
-                sleep 0.2
+        while i < 2
+            rocket_launch_array.each do | rocket |
+                print rocket + "\r"
+                sleep 0.5
             end
             i += 1
         end
     end
     # Rocket Animation
+
+
+
+    # Sniper Shot
+    def self.sniper_shot
+        sniper_shot_array = [
+            "________________                                                                                             ".blue,
+            "            ________________                                                                                 ".light_blue,
+            "                        ________________                                                                     ".blue,
+            "                                    ________________                                                         ".light_blue,
+            "                                                ________________                                             ".blue,
+            "                                                            ________________                                 ".light_blue,
+            "                                                                        ________________                     ".blue,
+            "                                                                                    ________________         ".light_blue,
+            "                                                                                             ________________".blue,
+        ]
+    
+        i = 1
+        while i < 2
+            sniper_shot_array.each do | rocket |
+                print rocket + "\r"
+                sleep 0.2
+            end
+            i += 1
+        end
+    end
+    # Sniper Shot
 
 
 
