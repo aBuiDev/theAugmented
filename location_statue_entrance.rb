@@ -985,8 +985,16 @@ module GameLocations
         puts "You reach over to your brother and communicate via #{"| InfoLink Augmentation |".light_cyan}, the two of you:"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
-        puts "critically damaged and unconscious brother..."
+        puts "Activate #{"| Mecha Battle-Mode Augmentation |".light_cyan}!"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Activate #{"| Time-Warp Augmentation |".light_cyan}!"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Activate #{"| Micro-fibral Muscle Augmentation |".light_cyan}!"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Activate #{"| Metal Transmutation Augmentation |".light_cyan}!"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -1013,16 +1021,25 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Standing between you and your brother, who only just regained consciousness..."
+        puts "With these augmentations activated and the combined power of you and your brother's power-systems"
+        puts "via #{"| InfoLink Augmentation |".light_cyan}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Hermes Himler looks down at you both..."
+        puts "You engage #{"| Time-Warp Augmentation |".light_cyan} to slow down time within a 50m radius..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "his arms tranforming into thermal rail cannons using #{"| Thermal Rail Cannon Augmentation |".red}..."
+        puts "Through artificial telepathy, you take out the GEP Gun you collected from the mutated,"
+        puts "and augmented sewer rat..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "with both arms pointed directly at the center of your visions..."
+        puts "you take out the Sniper Rifle you collected off Terrorist Sub-Commander Helena Hellspawn..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "through your combined power, you use #{"| Metal Transmutation Augmentation |".light_cyan}..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "to transmute the two weapons into a Fission Powered Super Weapon, capable of generating fission"
+        puts "projectiles that can track enemies with military precision."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -1049,10 +1066,14 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "... without a word ..."
+        puts "As the #{"| Time-Warp Augmentation |".light_cyan} runs out of power, transmutation of the super weapon completes..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "... it all goes to silence ..."
+        puts "You use combined artifical telepathic augmentation powers to aim the weapon at Hermes Himler, who is charging ferociously"
+        puts "at the two of you in slow motion due to the #{"| Time-Warp Augmentation |".light_cyan}..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "and fire the weapon..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -1066,8 +1087,86 @@ module GameLocations
         # Control Conditionals ------------------------------------------------------------------
         case continue_command
         when 1
-            InterfaceElements.game_over
+            GameLocations.location_statue_entrance_gep_sniper_win_part_four(new_player)
         end
+    end
+
+
+
+    # Location: Statue Entrance GEP Sniper Win Part Four
+    def self.location_statue_entrance_gep_sniper_win_part_four(new_player)
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Statue Entrance".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        Animations.rocket_launch
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        InterfaceElements.clear
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "The weapon's power disintegrates most of Hermes Himler's mechanical systems leaving what little"
+        puts "of his brain is left that is human..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You engage #{"| Nano Teleportation Augmentation |".light_cyan} and materialise to where his"
+        puts "bare brain lays..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "You activate #{"| Bio-Scan Augmentation |".light_cyan} and scan his brain for any information..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "revealing a cryptic message:..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "#{"Protocol:... Augmutation... Bio-Unit... 88...".green}:..."
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Continue', value: 1},
+        ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            GameLocations.location_statue_entrance_gep_sniper_win_part_five(new_player)
+        end
+
+
+        # Location: Statue Entrance GEP Sniper Win Part Five
+        def self.location_statue_entrance_gep_sniper_win_part_five(new_player)
+            InterfaceElements.clear
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts "Statue Entrance".light_cyan
+            puts InterfaceElements::VISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts "What does this cryptic message mean?"
+            sleep 1
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts "Find out in #{"The Augmented II".light_cyan}!"
+            sleep 1
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            puts InterfaceElements::VISIBLE_SEPARATOR
+            puts InterfaceElements::INVISIBLE_SEPARATOR
+            # Interface Controls --------------------------------------------------------------------
+            prompt = TTY::Prompt.new
+            continue_only = [
+                {name: 'Continue', value: 1},
+            ]
+            continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+            # Control Conditionals ------------------------------------------------------------------
+            case continue_command
+            when 1
+                InterfaceElements.game_over
+            end
     end
 
 
@@ -1075,3 +1174,6 @@ module GameLocations
 
 
 end
+
+
+
