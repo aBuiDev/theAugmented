@@ -183,4 +183,5 @@ Screenshot of Trello Board on day before submission:
 1. Open a terminal / CLI.
 2. Navigate to or create a directory you want "The Augmented" to be installed.
 3. Once in that directory, run ```git clone git@github.com:aBuiDev/the_augmented.git``` to clone a copy of "The Augmented" onto your computer.
-4. Before application can run, user must run 'bundle install' to require application dependencies.
+4. Before application can run, user must run ```$ bundle install``` to require application dependencies (make sure you are inside the application directory).
+5. To start the game, either type ```$ ruby the_augmented.rb``` or ```$ ./the_augmented.sh```.
