@@ -16,6 +16,7 @@
 - [User Interaction & User Experience](###User-Interaction-&-User-Experience)
 - [Control Flow Diagram](###Control-Flow-Development)
 - [Implementation Plan](###Implementation-Plan)
+- [Testing](###Testing)
 - [Help](###Help)
 
 <br>
@@ -70,12 +71,13 @@ Users can navigate through the story and different locations via prompts. This w
 * **Feature II:** <br>
 A final turn-based boss fight that will use Ruby's .rand() method to select what attack the final boss will use randomly, the user won't know what the attack will be and will have the option to choose from three different attacks or defences. If the boss counters the attack/defence, then the user will sustain damage and lose hitpoints. If the user's option counters the bosses attack, the user is given a chance to counter-attack and therefore able to do damage to the boss.
 
-* **Intended Gem List:** <br>
-    - Ascii Art
-    - Tables
-    - Prompts
-    - Coloured Text
+* **Gem List:** <br>
+    - TTY-Prompt
+    - Terminal Table
+    - Colorize
+    - Ruby3d
     - Rspec
+    - Bundler
 <br>
     
 <br>
@@ -118,6 +120,21 @@ A final turn-based boss fight that will use Ruby's .rand() method to select what
 <br>
 
 ![Trello Screenshot](./trello_screenshot.jpg)
+
+<br>
+
+#
+
+<br>
+
+### Testing
+<br>
+
+* Two successful tests outputting using Rspec. Tested ability for the app to create a new class from a new_player instance.
+
+<br>
+
+![Rspec Tests Screenshot](./rspec_tests_screenshot.jpg)
 
 <br>
 
