@@ -171,7 +171,7 @@ module EpicBossFight
             if hermes_points >= player_points
                 GameLocations.location_statue_entrance_gep_sniper_lose_part_one(new_player)
             else
-                puts "Player wins"
+                GameLocations.location_statue_entrance_gep_sniper_win_part_one(new_player)
             end
         end
     end

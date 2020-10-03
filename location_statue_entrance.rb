@@ -972,7 +972,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You activate #{"| Nano Teleportation Augmentation |".red} and material next to your brother who is slowly"
+        puts "You activate #{"| Nano Teleportation Augmentation |".red} and materialise next to your brother who is slowly"
         puts "regaining consciousness."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -1107,6 +1107,10 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Statue Entrance".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "The weapon's power disintegrates most of Hermes Himler's mechanical systems leaving what little"
@@ -1139,41 +1143,38 @@ module GameLocations
         when 1
             GameLocations.location_statue_entrance_gep_sniper_win_part_five(new_player)
         end
-
-
-        # Location: Statue Entrance GEP Sniper Win Part Five
-        def self.location_statue_entrance_gep_sniper_win_part_five(new_player)
-            InterfaceElements.clear
-            puts InterfaceElements::INVISIBLE_SEPARATOR
-            puts "Statue Entrance".light_cyan
-            puts InterfaceElements::VISIBLE_SEPARATOR
-            puts InterfaceElements::INVISIBLE_SEPARATOR
-            puts "What does this cryptic message mean?"
-            sleep 1
-            puts InterfaceElements::INVISIBLE_SEPARATOR
-            puts "Find out in #{"The Augmented II".light_cyan}!"
-            sleep 1
-            puts InterfaceElements::INVISIBLE_SEPARATOR
-            puts InterfaceElements::VISIBLE_SEPARATOR
-            puts InterfaceElements::INVISIBLE_SEPARATOR
-            # Interface Controls --------------------------------------------------------------------
-            prompt = TTY::Prompt.new
-            continue_only = [
-                {name: 'Continue', value: 1},
-            ]
-            continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
-            # Control Conditionals ------------------------------------------------------------------
-            case continue_command
-            when 1
-                InterfaceElements.game_over
-            end
     end
 
 
-
-
-
+    # Location: Statue Entrance GEP Sniper Win Part Five
+    def self.location_statue_entrance_gep_sniper_win_part_five(new_player)
+        InterfaceElements.clear
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Statue Entrance".light_cyan
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "What does this cryptic message mean?"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts "Find out in #{"The Augmented II".light_cyan}!"
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        puts InterfaceElements::VISIBLE_SEPARATOR
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        # Interface Controls --------------------------------------------------------------------
+        prompt = TTY::Prompt.new
+        continue_only = [
+            {name: 'Continue', value: 1},
+        ]
+        continue_command = prompt.select("Press Continue When Ready:".light_cyan, continue_only)
+        # Control Conditionals ------------------------------------------------------------------
+        case continue_command
+        when 1
+            InterfaceElements.game_over
+        end
+    end
 end
+
 
 
 
