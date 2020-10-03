@@ -152,7 +152,7 @@ Screenshot of Trello Board on day of initialisation:
 
 Screenshot of Trello Board on day before submission:
 
-![Trello Screenshot](./trello_screenshot.jpg)
+![Trello Screenshot](./trello_screenshot_02.jpg)
 
 <br>
 
