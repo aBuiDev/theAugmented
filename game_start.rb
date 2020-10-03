@@ -194,8 +194,8 @@ module GameIntro
         # Control Conditionals ------------------------------------------------------------------
         case continue_command
         when 1
-            # GameLocations.location_rendezvuos_start(new_player)
-            EpicBossFight.battle_time(new_player)
+            GameLocations.location_rendezvuos_start(new_player)
+            # EpicBossFight.battle_time(new_player)
         end
     end
 end

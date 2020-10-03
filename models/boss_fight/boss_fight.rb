@@ -1,15 +1,10 @@
 require_relative './bosses.rb'
 require_relative '../../classes.rb'
 require_relative '../../interface.rb'
+require_relative '../../location_statue_entrance.rb'
 require 'tty-prompt'
 require 'colorize'
 
-# puts HermesHimler.attack
-
-# new_assassin = CyberAssassin.new("Andrew")
-# puts new_assassin.attacks[0][:move]
-
-# new_assassin = CyberAssassin.new("Andrew")
 
 
 module EpicBossFight
@@ -157,6 +152,9 @@ module EpicBossFight
         puts "The battle is over, destruction and debris still moving around you and Hermes Himler..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
+        puts "dust and smoke moving around the two of you as if slow motion..."
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        sleep 1
         puts "As the smoke clears between you and Hermes Himler, clarity falls upon the both of you like a crushing wave..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -171,7 +169,7 @@ module EpicBossFight
         case continue_command
         when 1
             if hermes_points >= player_points
-                puts "Hermes Wins"
+                GameLocations.location_statue_entrance_gep_sniper_lose_part_one(new_player)
             else
                 puts "Player wins"
             end
