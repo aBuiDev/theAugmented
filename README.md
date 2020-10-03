@@ -13,6 +13,7 @@
 - [Links](###Links)
 - [Development, Purpose & Scope](###Development,-Purpose-&-Scope)
 - [Feature List](###Feature-List)
+- [Gems](###Gems)
 - [User Interaction & User Experience](###User-Interaction-&-User-Experience)
 - [Control Flow Diagram](###Control-Flow-Development)
 - [Implementation Plan](###Implementation-Plan)
@@ -70,17 +71,21 @@ Users can navigate through the story and different locations via prompts. This w
 
 * **Feature II:** <br>
 A final turn-based boss fight that will use Ruby's .rand() method to select what attack the final boss will use randomly, the user won't know what the attack will be and will have the option to choose from three different attacks or defences. If the boss counters the attack/defence, then the user will sustain damage and lose hitpoints. If the user's option counters the bosses attack, the user is given a chance to counter-attack and therefore able to do damage to the boss.
+<br>
 
-* **Gem List:** <br>
-    - TTY-Prompt
-    - Terminal Table
-    - Colorize
-    - Ruby3d
-    - Rspec
-    - Bundler
 <br>
-    
+
+#
+
+### Gems
 <br>
+
+* TTY-Prompt
+* Colorize
+* Bundler
+* Rspec
+* Ruby2d
+* Terminal Table
 
 <br>
 
@@ -91,9 +96,29 @@ A final turn-based boss fight that will use Ruby's .rand() method to select what
 ### User Interaction & User Experience
 <br>
 
-* **High Level Affordances:**
-* **Interaction Affordances:**
-* **Error Handling:**
+The Augmented game layout is designed to be visually the same throughout, including colours as well as stylistic elements like the dotted bars to separate the different elements on each individual "screen" the player interacts with. Key repeating elements are used to help the user understand the layout and interactive possibilites of the application.
+
+![UX Screenshot](./ux_screenshot.jpg)
+
+<br>
+
+* **1. Location Titles & Headers** <br>
+At the top of each section is a title that outlines where the user is at any given time. The Augmented story is split into four different locations: The Sewers, The Rendezvous, The Liberty Statue Head and the Liberty Statue Entrance. As the user navigates through the game, the title changes to help them navigate. This is an important element as one of the features of The Augmented is the ability to allow players to navigate back and forth to different areas.
+
+<br>
+
+* **2. Layout Elements** <br>
+Layout elements are purposely implemented as a visual aid to help users distinguish between the different sections of the screen. In the screenshot above, a dotted line separator is used to separate the area title from the body text. Another dotted line is implemented at the bottom to separate the game text with the game controls.
+
+<br>
+
+* **3. Game Text** <br>
+Text throughout the game are deployed between one second ```sleep``` methods. This user-focused feature is implemented so that the user has more engagement with the game story. This creates a better reading flow for the user instead of them being given a huge chunk of text to read though. This feature also allows for more interactive and immersive scripted sections where the user views custom ascii animations to aid with the story-telling. Game text are also split using empty lints to create a better reading experience for the user. 
+
+<br>
+
+* **4. Game Controls** <br>
+Game controls are dynamic and are created using TTY-Prompt. They are positioned at the bottom of the page under the game text and separated by a dotted line separator. Game controls don't appear until all game text at the section has been deployed. Game Controls are also dynamic, each one having special options depending on where the user is located i.e. the image above shows the user can loot a certain creature, this looting specific looting option is only available inside the sewer. Instructions on how to use the controls are apparent in grey next to the game control's title.
 
 <br>
 
@@ -115,9 +140,17 @@ A final turn-based boss fight that will use Ruby's .rand() method to select what
 ### Implementation Plan
 <br>
 
-* [Trello Plan](https://trello.com/b/TNtHkGjY/theaugmented)
+* [Link to Trello Plan](https://trello.com/b/TNtHkGjY/theaugmented)
 
 <br>
+
+Screenshot of Trello Board on day of initialisation:
+
+![Trello Screenshot](./trello_screenshot.jpg)
+
+<br>
+
+Screenshot of Trello Board on day before submission:
 
 ![Trello Screenshot](./trello_screenshot.jpg)
 
@@ -148,4 +181,4 @@ A final turn-based boss fight that will use Ruby's .rand() method to select what
 1. Open a terminal / CLI.
 2. Navigate to or create a directory you want "The Augmented" to be installed.
 3. Once in that directory, run ```git clone git@github.com:aBuiDev/the_augmented.git``` to clone a copy of "The Augmented" onto your computer.
-4. Before application can run, user must run 'gem install' to require application dependencies.
+4. Before application can run, user must run 'bundle install' to require application dependencies.
