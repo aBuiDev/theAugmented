@@ -131,6 +131,8 @@ Game controls are dynamic and are created using TTY-Prompt. They are positioned 
 
 * **Control Flow Diagram:**
 
+![Control Flow Diagram](./control_flow_diagram.jpeg)
+
 <br>
 
 #
