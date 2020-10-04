@@ -3,8 +3,8 @@ require 'time'
 require 'colorize'
 require 'tty-prompt'
 require 'terminal-table'
-require_relative './game_start.rb'
-require_relative './interface.rb'
+require_relative './game_engine.rb'
+require_relative '../controllers/interface.rb'
 
 module Animations
 
