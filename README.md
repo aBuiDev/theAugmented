@@ -5,7 +5,7 @@
 
 <br>
 
-![The-Augmented-Cover-Image](./the_augmented_cover_image.jpg)
+![The-Augmented-Cover-Image](./readme_elements/the_augmented_cover_image.jpg)
 
 <br>
 
@@ -98,7 +98,7 @@ A final turn-based boss fight that will use Ruby's .rand() method to select what
 
 The Augmented game layout is designed to be visually the same throughout, including colours as well as stylistic elements like the dotted bars to separate the different elements on each individual "screen" the player interacts with. Key repeating elements are used to help the user understand the layout and interactive possibilites of the application.
 
-![UX Screenshot](./ux_screenshot.jpg)
+![UX Screenshot](./readme_elements/ux_screenshot.jpg)
 
 <br>
 
@@ -131,7 +131,7 @@ Game controls are dynamic and are created using TTY-Prompt. They are positioned 
 
 * **Control Flow Diagram:**
 
-![Control Flow Diagram](./control_flow_diagram.jpeg)
+![Control Flow Diagram](./readme_elements/control_flow_diagram.jpg)
 
 <br>
 
@@ -148,13 +148,13 @@ Game controls are dynamic and are created using TTY-Prompt. They are positioned 
 
 Screenshot of Trello Board on day of initialisation:
 
-![Trello Screenshot](./trello_screenshot.jpg)
+![Trello Screenshot](./readme_elements/trello_screenshot.jpg)
 
 <br>
 
 Screenshot of Trello Board on day before submission:
 
-![Trello Screenshot](./trello_screenshot_02.jpg)
+![Trello Screenshot](./readme_elements/trello_screenshot_02.jpg)
 
 <br>
 
@@ -169,7 +169,7 @@ Screenshot of Trello Board on day before submission:
 
 <br>
 
-![Rspec Tests Screenshot](./rspec_tests_screenshot.jpg)
+![Rspec Tests Screenshot](./readme_elements/rspec_tests_screenshot.jpg)
 
 <br>
 
