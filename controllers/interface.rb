@@ -1,3 +1,4 @@
+require 'ruby2d'
 
 
 # Game Interface

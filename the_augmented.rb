@@ -14,13 +14,12 @@ require_relative './models/locations/rendezvous/location_rendezvous.rb'
 require_relative './models/locations/sewers/location_sewers.rb'
 require_relative './models/locations/statue_entrance/location_statue_entrance.rb'
 require_relative './models/locations/statue_head/location_statue_head.rb'
-require_relative './audio.rb'
 
 
 
 # Audio Track
 Music.volume = 50
-song = Music.new('background_music.mp3')
+song = Music.new('./audio/background_music.mp3')
 song.play
 
 
