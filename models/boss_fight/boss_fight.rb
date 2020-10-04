@@ -1,7 +1,7 @@
 require_relative './bosses.rb'
 require_relative '../../classes.rb'
 require_relative '../../interface.rb'
-require_relative '../../location_statue_entrance.rb'
+require_relative '../locations/statue_entrance/location_statue_entrance.rb'
 require 'tty-prompt'
 require 'colorize'
 

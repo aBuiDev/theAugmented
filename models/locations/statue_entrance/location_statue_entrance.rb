@@ -1,5 +1,4 @@
-require_relative './models/boss_fight/boss_fight.rb'
-
+require_relative '../../boss_fight/boss_fight.rb'
 
 
 module GameLocations

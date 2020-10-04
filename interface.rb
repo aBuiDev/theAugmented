@@ -366,7 +366,7 @@ module InterfaceElements
         puts "           |_|    \\____/|_|  \\_\\ |_|    |______/_/    \\_\\_|  |_____|_| \\_|\_____|   ".light_cyan
         puts ""
         puts ""
-        puts "                            The Augmented by @aBuiDev                           ".green     
+        puts "                                The Augmented by @aBuiDev                                 ".green     
         puts ""   
         puts ""                                                        
     end

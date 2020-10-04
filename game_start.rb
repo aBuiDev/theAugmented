@@ -6,10 +6,10 @@ require 'terminal-table'
 require_relative './animations.rb'
 require_relative './classes.rb'
 require_relative './interface.rb'
-require_relative './location_rendezvous.rb'
-require_relative './location_sewers.rb'
-require_relative './location_statue_entrance.rb'
-require_relative './location_statue_head.rb'
+require_relative './models/locations/rendezvous/location_rendezvous.rb'
+require_relative './models/locations/sewers/location_sewers.rb'
+require_relative './models/locations/statue_entrance/location_statue_entrance.rb'
+require_relative './models/locations/statue_head/location_statue_head.rb'
 
 
 # Story Elements Module
@@ -195,7 +195,6 @@ module GameIntro
         case continue_command
         when 1
             GameLocations.location_rendezvuos_start(new_player)
-            # EpicBossFight.battle_time(new_player)
         end
     end
 end

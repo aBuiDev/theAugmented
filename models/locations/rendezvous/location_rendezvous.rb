@@ -18,7 +18,6 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "You decide to..."
-        puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         # Interface Controls --------------------------------------------------------------------
         InterfaceElements.rendezvous_game_controls(new_player)

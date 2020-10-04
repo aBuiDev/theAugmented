@@ -106,7 +106,6 @@ module GameLocations
         when 1
             GameLocations.liberty_statue_head_part_two(new_player)
         end
-        InterfaceElements.statue_head_game_controls(new_player)
     end
     
     # Location: Liberty Statue Head Game Over Part Two
