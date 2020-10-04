@@ -971,7 +971,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You activate #{"| Nano Teleportation Augmentation |".red} and materialise next to your brother who is slowly"
+        puts "You activate #{"| Nano Teleportation Augmentation |".light_cyan} and materialise next to your brother who is slowly"
         puts "regaining consciousness."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -984,16 +984,16 @@ module GameLocations
         puts "You reach over to your brother and communicate via #{"| InfoLink Augmentation |".light_cyan}, the two of you:"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Activate #{"| Mecha Battle-Mode Augmentation |".light_cyan}!"
+        puts "Activate #{"| Mecha Battle-Mode Augmentation |".green}!"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Activate #{"| Time-Warp Augmentation |".light_cyan}!"
+        puts "Activate #{"| Time-Warp Augmentation |".green}!"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Activate #{"| Micro-fibral Muscle Augmentation |".light_cyan}!"
+        puts "Activate #{"| Micro-fibral Muscle Augmentation |".green}!"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Activate #{"| Metal Transmutation Augmentation |".light_cyan}!"
+        puts "Activate #{"| Metal Transmutation Augmentation |".green}!"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -1126,7 +1126,7 @@ module GameLocations
         puts "revealing a cryptic message:..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "#{"Protocol:... Augmutation... Bio-Unit... 88...".green}:..."
+        puts "#{"Protocol:... Augmutation... Bio-Unit... 88...".green}"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR

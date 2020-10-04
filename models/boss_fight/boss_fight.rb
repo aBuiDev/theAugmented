@@ -1,5 +1,7 @@
 require_relative './bosses.rb'
-require_relative '../../classes.rb'
+require_relative '../classes/player_class.rb'
+require_relative '../classes/machine_tank.rb'
+require_relative '../classes/cyber_assassin.rb'
 require_relative '../../interface.rb'
 require_relative '../locations/statue_entrance/location_statue_entrance.rb'
 require 'tty-prompt'

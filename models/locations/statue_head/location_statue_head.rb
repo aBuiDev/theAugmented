@@ -17,7 +17,16 @@ module GameLocations
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
-        sleep 4
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "\r" + "     . ^ .     "
+        sleep 0.4
+        print "\r" + "   . . ^ . .   "
+        sleep 0.2
+        print "\r" + "  . .  ^  . .  "
+        sleep 0.2
+        print "\r" + " .. .  ^  . .. "
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         Animations.jump_rise
         InterfaceElements.clear
@@ -36,7 +45,17 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
         puts "statue's head."
-        sleep 4
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "\r" + "     . v .     " 
+        sleep 0.2
+        print "\r" + "   . . v . .   "
+        sleep 0.2
+        print "\r" + "  . .  v  . .  "
+        sleep 0.4
+        print "\r" + " .. .  v  . .. "
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         Animations.jump_land
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -255,7 +274,16 @@ module GameLocations
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
-        sleep 4
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "\r" + "     . ^ .     "
+        sleep 0.4
+        print "\r" + "   . . ^ . .   "
+        sleep 0.2
+        print "\r" + "  . .  ^  . .  "
+        sleep 0.2
+        print "\r" + " .. .  ^  . .. "
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         Animations.jump_rise
         InterfaceElements.clear
@@ -274,7 +302,17 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
         puts "statue's head."
-        sleep 4
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "\r" + "     . v .     " 
+        sleep 0.2
+        print "\r" + "   . . v . .   "
+        sleep 0.2
+        print "\r" + "  . .  v  . .  "
+        sleep 0.4
+        print "\r" + " .. .  v  . .. "
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         Animations.jump_land
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -454,7 +492,16 @@ module GameLocations
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "you launch yourself into the air, rising almost 100m above the statue of liberty's broken head..."
-        sleep 4
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "\r" + "     . ^ .     "
+        sleep 0.4
+        print "\r" + "   . . ^ . .   "
+        sleep 0.2
+        print "\r" + "  . .  ^  . .  "
+        sleep 0.2
+        print "\r" + " .. .  ^  . .. "
+        sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         Animations.jump_rise
         InterfaceElements.clear
@@ -473,7 +520,17 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "You use your CIA training and military precision to coordinate a perfect landing ontop of the "
         puts "statue's head."
-        sleep 4
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
+        print "\r" + "     . v .     " 
+        sleep 0.2
+        print "\r" + "   . . v . .   "
+        sleep 0.2
+        print "\r" + "  . .  v  . .  "
+        sleep 0.4
+        print "\r" + " .. .  v  . .. "
+        sleep 1
+        puts InterfaceElements::INVISIBLE_SEPARATOR
         Animations.jump_land
         InterfaceElements.clear
         puts InterfaceElements::INVISIBLE_SEPARATOR
