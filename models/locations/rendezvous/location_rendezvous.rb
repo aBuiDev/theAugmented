@@ -8,7 +8,7 @@ module GameLocations
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You arrive at the rendezvuos point and there is no sign of Henderson."
+        puts "You arrive at the rendezvuos point and there is no sign of Kable."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "As the ferry's engine fades into the distance, eerie silence begins to grow."
@@ -34,7 +34,7 @@ module GameLocations
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You return the to rendezvous area, there is still no sign of Henderson..."
+        puts "You return the to rendezvous area, there is still no sign of Kable..."
         sleep 1
         # Interface Controls --------------------------------------------------------------------
         InterfaceElements.rendezvous_game_controls(new_player)
@@ -54,7 +54,7 @@ module GameLocations
         puts "You return the to rendezvous area..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "however, Henderson is engaged in a massive battle with"
+        puts "however, Kable is engaged in a massive battle with"
         puts "Terrorist Commander Hermes Himler at the statue entrance!"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1

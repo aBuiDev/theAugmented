@@ -8,7 +8,7 @@ module GameLocations
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You venture into the sewers in search of your brother, besides the sound of your footsteps and"
+        puts "You venture into the sewers in search of Kable, besides the sound of your footsteps and"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "a faint dripping of water, you are shrouded by darkness and suffocating silence..."
@@ -27,7 +27,7 @@ module GameLocations
         puts "The Sewers".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You venture into the sewers in search of your brother, besides the sound of your footsteps..."
+        puts "You venture into the sewers in search of Kable, besides the sound of your footsteps..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "and a faint dripping of water, you are shrouded by darkness and a suffocating silence..."
         puts InterfaceElements::INVISIBLE_SEPARATOR

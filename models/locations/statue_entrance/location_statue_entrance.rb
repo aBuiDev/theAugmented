@@ -12,19 +12,19 @@ module GameLocations
         sleep 1
         puts "You materialise at the statue entrance where you find yourself in the middle of a massively destructive augmented battle!"
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Your brother is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
+        puts "Kable is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Henderson is almost defeated, scans are showing most of his systems are critical..."
+        puts "Kable is almost defeated, scans are showing most of his systems are critical..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Your brother needs you... the world needs you... Hermes must be defeated..."
+        puts "Kable needs you... the world needs you... Hermes must be defeated..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Your shock turns into rage... you fire up your weapon systems and go into augmented battle mode..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to your injured brother..." 
+        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to Kable..." 
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -98,7 +98,7 @@ module GameLocations
         puts "Hermes Himler executes a powerful #{"| Gravity Slam Augmentation |".red}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "lifting everything in the area, including you and your brother into the air and slamming"
+        puts "lifting everything in the area, including you and Kable into the air and slamming"
         puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -130,7 +130,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Standing between you and your brother, who only just regained consciousness..."
+        puts "Standing between you and Kable, who only just regained consciousness..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Hermes Himler looks down at you both..."
@@ -200,19 +200,19 @@ module GameLocations
         puts "You materialise at the statue entrance where you find yourself in the middle of a massively destructive augmented battle!"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
+        puts "Kable is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Henderson is almost defeated, scans are showing most of his systems are critical..."
+        puts "Kable is almost defeated, scans are showing most of his systems are critical..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother needs you... the world needs you... Hermes must be defeated..."
+        puts "Kable needs you... the world needs you... Hermes must be defeated..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "Your shock turns into rage... you fire up your weapon systems and go into augmented battle mode..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to your injured brother..." 
+        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to Kable..." 
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -286,7 +286,7 @@ module GameLocations
         puts "Hermes Himler executes a powerful #{"| Gravity Slam Augmentation |".red}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "lifting everything in the area, including you and your brother into the air and slamming"
+        puts "lifting everything in the area, including you and Kable into the air and slamming"
         puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -368,7 +368,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Standing between you and your brother, who only just regained consciousness..."
+        puts "Standing between you and Kable, who only just regained consciousness..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Hermes Himler looks down at you both..."
@@ -438,19 +438,19 @@ module GameLocations
         puts "You materialise at the statue entrance where you find yourself in the middle of a massively destructive augmented battle!"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
+        puts "Kable is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Henderson is almost defeated, scans are showing most of his systems are critical..."
+        puts "Kable is almost defeated, scans are showing most of his systems are critical..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother needs you... the world needs you... Hermes must be defeated..."
+        puts "Kable needs you... the world needs you... Hermes must be defeated..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "Your shock turns into rage... you fire up your weapon systems and go into augmented battle mode..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to your injured brother..." 
+        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to Kable..." 
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -524,7 +524,7 @@ module GameLocations
         puts "Hermes Himler executes a powerful #{"| Gravity Slam Augmentation |".red}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "lifting everything in the area, including you and your brother into the air and slamming"
+        puts "lifting everything in the area, including you and Kable into the air and slamming"
         puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -615,7 +615,7 @@ module GameLocations
         puts "Hermes Himler activates #{"| Matter Pull Augmentation |".red} and pulls you from your location..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "hurling you into the air and purposely crashing you down next to your brother..."
+        puts "hurling you into the air and purposely crashing you down next to Kable..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
@@ -646,7 +646,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Standing between you and your brother, who only just regained consciousness..."
+        puts "Standing between you and Kable, who only just regained consciousness..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Hermes Himler looks down at you both..."
@@ -716,19 +716,19 @@ module GameLocations
         puts "You materialise at the statue entrance where you find yourself in the middle of a massively destructive augmented battle!"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
+        puts "Kable is in battle with Terrorist Commander Hermes Himler, a brutal mercenary and ultra-augmented enemy of the world."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Henderson is almost defeated, scans are showing most of his systems are critical..."
+        puts "Kable is almost defeated, scans are showing most of his systems are critical..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother needs you... the world needs you... Hermes must be defeated..."
+        puts "Kable needs you... the world needs you... Hermes must be defeated..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "Your shock turns into rage... you fire up your weapon systems and go into augmented battle mode..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to your injured brother..." 
+        puts "You re-engage #{"| Nano Teleporation Augmentation |".green} and materialise next to Kable..." 
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -802,7 +802,7 @@ module GameLocations
         puts "Hermes Himler executes a powerful #{"| Gravity Slam Augmentation |".red}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "lifting everything in the area, including you and your brother into the air and slamming"
+        puts "lifting everything in the area, including you and Kable into the air and slamming"
         puts "everything and everyone onto the ground, generating a massive shockwave..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
@@ -840,7 +840,7 @@ module GameLocations
         puts "release a massive shockwave using #{"| Anti-Matter Pulse Augmentation |".light_cyan}, causing Hermes Himler to take a step back"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "and purposely hurtling your brother to a safe distance..."
+        puts "and purposely hurtling Kable to a safe distance..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "you go into battle mode..."
@@ -874,7 +874,7 @@ module GameLocations
         puts "Hermes Himler activates #{"| Matter Pull Augmentation |".red} and pulls you from your location..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "hurling you into the air and purposely crashing you down next to your brother..."
+        puts "hurling you into the air and purposely crashing you down next to Kable..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "using #{"| Electron Teleporation Augmentation |".red} Hermes Himler materialises between you and your"
@@ -905,7 +905,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Standing between you and your brother, who only just regained consciousness..."
+        puts "Standing between you and Kable, who only just regained consciousness..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Hermes Himler looks down at you both..."
@@ -971,17 +971,17 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You activate #{"| Nano Teleportation Augmentation |".light_cyan} and materialise next to your brother who is slowly"
+        puts "You activate #{"| Nano Teleportation Augmentation |".light_cyan} and materialise next to Kable who is slowly"
         puts "regaining consciousness."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "After witnessing all this destruction, being a part of it, and seeing your brother in this condition..."
+        puts "After witnessing all this destruction, being a part of it, and seeing Kable in this condition..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "rage, human emotion, and artificial adrenaline surge through your body and systems..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You reach over to your brother and communicate via #{"| InfoLink Augmentation |".light_cyan}, the two of you:"
+        puts "You reach over to Kable and communicate via #{"| InfoLink Augmentation |".light_cyan}, the two of you:"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "Activate #{"| Mecha Battle-Mode Augmentation |".green}!"
@@ -1020,7 +1020,7 @@ module GameLocations
         puts "Statue Entrance".light_cyan
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "With these augmentations activated and the combined power of you and your brother's power-systems"
+        puts "With these augmentations activated and the combined power of you and Kable's power-systems"
         puts "via #{"| InfoLink Augmentation |".light_cyan}..."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR

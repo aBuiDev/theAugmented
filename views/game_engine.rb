@@ -175,7 +175,7 @@ module GameIntro
         puts "You are on a ferry toward Staten Island."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother, agent Henderson Caddel is already there and waiting at the"
+        puts "Your brother, agent Kable Caddel is already there and waiting at the"
         puts "rendezvous point to debrief you."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1

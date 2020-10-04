@@ -100,7 +100,7 @@ module GameLocations
         puts "and scan the surrounding area from this vantage point."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "#{"| Eagle Eye Vision Augmentation |".green} locks onto Henderson!,"
+        puts "#{"| Eagle Eye Vision Augmentation |".green} locks onto Kable!,"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "who is engaged in an earth-shattering augmented battle with Terrorist Commander Hermes Himler..."
@@ -135,7 +135,7 @@ module GameLocations
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Henderson is also a #{new_player.class_name.light_cyan} class, super-agent..."
+        puts "Kable is also a #{new_player.class_name.light_cyan} class, super-agent..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "however, he alone cannot defeat Terrorist Commander Hermes Himler..."
@@ -147,7 +147,7 @@ module GameLocations
         puts "You hope that the weapons you are carrying at the moment are enough..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "you have no other option but to aid Henderson."
+        puts "you have no other option but to aid Kable."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "..."
@@ -226,7 +226,7 @@ module GameLocations
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Fueled by both pure rage and desperation to save your brother, you..."
+        puts "Fueled by both pure rage and desperation to save Kable, you..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "activate #{"| Nano Arm Blade Augmentation |".green}!"
@@ -357,7 +357,7 @@ module GameLocations
         puts "and scan the surrounding area from this vantage point."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "#{"| Eagle Eye Vision Augmentation |".green} locks onto Henderson!,"
+        puts "#{"| Eagle Eye Vision Augmentation |".green} locks onto Kable!,"
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "who is engaged in an earth-shattering augmented battle with Terrorist Commander Hermes Himler..."
@@ -392,7 +392,7 @@ module GameLocations
         puts InterfaceElements::VISIBLE_SEPARATOR
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Henderson is also a #{new_player.class_name.light_cyan} class, super-agent..."
+        puts "Kable is also a #{new_player.class_name.light_cyan} class, super-agent..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "however, he alone cannot defeat Terrorist Commander Hermes Himler..."
@@ -404,7 +404,7 @@ module GameLocations
         puts "You have no weapons..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "however, you have no other option but to aid Henderson."
+        puts "however, you have no other option but to aid Kable."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "..."
@@ -553,7 +553,7 @@ module GameLocations
         puts "half of her body hanging over one of the liberty crown's spikes"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "Your brother is still engaged in a deadly augmented battle with Hermes Himler..."
+        puts "Kable is still engaged in a deadly augmented battle with Hermes Himler..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "You can feel the impact of their war resonate up the liberty tower for which you stand."
