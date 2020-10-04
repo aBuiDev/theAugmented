@@ -1,5 +1,7 @@
 require 'rspec'
-require_relative '../../classes.rb'
+require_relative '../../models/classes/machine_tank.rb'
+require_relative '../../models/classes/player_class.rb'
+require_relative '../../models/classes/cyber_assassin.rb'
 
 
 # Testing that a Machine Tank class is generated with all object inside the class initialising.

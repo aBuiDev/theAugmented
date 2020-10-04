@@ -2,7 +2,6 @@
 require 'terminal-table'
 
 
-
 # Player Classes
 class PlayerClass
     attr_accessor :name, :inventory, :inventory_row, :weapons, :weapon_row, :weapon_name, :quest_items, :hit_points, :power_level

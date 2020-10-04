@@ -1,5 +1,6 @@
 # Dependencies
 require 'terminal-table'
+require_relative './player_class.rb'
 
 
 
