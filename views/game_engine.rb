@@ -41,13 +41,13 @@ module GameIntro
         puts InterfaceElements::VISIBLE_SEPARATOR
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "In the Augmented, you can play as either a Machine Tank or a Cyber Assassin:"
+        puts "In the Augmented, you can play as either a #{"Machine Tank".light_blue} or a #{"Cyber Assassin".light_magenta}."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Machine Tanks can sustain more damage and are masters of long range weaponry, however, their movements are slower."
+        puts "#{"Machine Tank".light_blue} can sustain more damage and are masters of long range weaponry, however, their movements are slower."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "Cyber Assassins move much quicker and do massive damage at close range, however, they have lower hit points."
+        puts "#{"Cyber Assassin".light_magenta} move much quicker and do massive damage at close range, however, they have lower hit points."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
@@ -55,8 +55,8 @@ module GameIntro
         # Interface Controls --------------------------------------------------------------------
         prompt = TTY::Prompt.new
         player_class_selection = [
-            {name: 'Machine Tank', value: 1},
-            {name: 'Cyber Assassin', value: 2},
+            {name: 'Machine Tank'.light_blue, value: 1},
+            {name: 'Cyber Assassin'.light_magenta, value: 2},
           ]
         player_class = prompt.select("Please select your class:".light_cyan, player_class_selection)
   
@@ -134,7 +134,11 @@ module GameIntro
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You are a #{new_player.class_name.light_cyan} class special agent."
+        if new_player.class_name == "machine Tank"
+            puts "You are a #{new_player.class_name.light_blue} class special agent."
+        else
+            puts "You are a #{new_player.class_name.light_magenta} class special agent."
+        end
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR
