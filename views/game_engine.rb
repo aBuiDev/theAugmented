@@ -136,7 +136,7 @@ module GameIntro
         puts InterfaceElements::INVISIBLE_SEPARATOR
         if new_player.class_name == "machine Tank"
             puts "You are a #{new_player.class_name.light_blue} class special agent."
-        else
+        else new_player.class_name == "cyber assassin"
             puts "You are a #{new_player.class_name.light_magenta} class special agent."
         end
         sleep 1

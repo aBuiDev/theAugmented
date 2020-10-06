@@ -200,7 +200,7 @@ module InterfaceElements
                 new_player.add_weapon(gep_gun)
                 new_player.add_weapon_name(gep_gun)
                 puts InterfaceElements::INVISIBLE_SEPARATOR
-                puts "Upon inspection of the creature, you discover a #{"(Guided Explosive Projectile) GEP Gun".light_cyan}."
+                puts "Upon inspection of the creature, you discover a #{"(Guided Explosive Projectile) GEP Gun".yellow}."
                 puts InterfaceElements::INVISIBLE_SEPARATOR
                 sleep 1
                 puts "You loot the creature's body.".yellow

@@ -14,7 +14,7 @@ module GameLocations
         puts "a faint dripping of water, you are shrouded by darkness and suffocating silence..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You activate #{"| Optical CLA Night Vision |".green} augmentation and scan your surroundings..."
+        puts "You activate #{"| Optical CLA Night Vision |".light_cyan} augmentation and scan your surroundings..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         Animations.night_vision_scan
@@ -31,14 +31,14 @@ module GameLocations
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts "and a faint dripping of water, you are shrouded by darkness and a suffocating silence..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You activate #{"| Optical CLA Night Vision Augmentation |".green} and scan your surroundings..."
+        puts "You activate #{"| Optical CLA Night Vision Augmentation |".light_cyan} and scan your surroundings..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "A giant mutated and augmented sewer rat lunges towards you, it's red glowing eyes peircing into your soul"
         puts "with pure ferosity, as it flys towards you..."
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
-        puts "You activate #{"| Optical Photon Beam Augmentation |".red}, glowing beams shoot out of your augmented eyes,"
+        puts "You activate #{"| Optical Photon Beam Augmentation |".light_cyan}, glowing beams shoot out of your augmented eyes,"
         puts InterfaceElements::INVISIBLE_SEPARATOR
         sleep 1
         puts "piercing both the creatures brain, heart and breaking the creature's spine as the beam exits the creatures back,"
