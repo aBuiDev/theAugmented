@@ -122,6 +122,13 @@ module GameIntro
         end
     end
 
+    # def self.tank_assassin(new_player)
+    #     if new_player.class_name_caller.include? "machine Tank"
+    #         puts "You are a #{new_player.class_name.light_blue} class special agent."
+    #     elsif new_player.class_name_caller.include? "cyber assassin"
+    #         puts "You are a #{new_player.class_name.light_magenta} class special agent."
+    #     end
+    # end
 
 
     def self.story_intro_part_two(new_player)
@@ -134,11 +141,7 @@ module GameIntro
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        if new_player.class_name == "machine Tank"
-            puts "You are a #{new_player.class_name.light_blue} class special agent."
-        else new_player.class_name == "cyber assassin"
-            puts "You are a #{new_player.class_name.light_magenta} class special agent."
-        end
+        puts "You are a #{new_player.class_name.yellow} class special agent."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR

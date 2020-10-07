@@ -9,6 +9,7 @@ class MachineTank < PlayerClass
     def initialize(player_name)
         super(player_name)
         @class_name = "machine tank"
+        @class_caller << "machine tank"
         @inventory = [
             health_pack = {item_name: "20HP+ Health Pack", health_amount: 20, quantity: 1},
         ]
@@ -61,6 +62,10 @@ class MachineTank < PlayerClass
             {move: "| Nano Arm Blade Augmentation |", damage: 20, energy: 25},
             {move: "| Titan Shield Augmentation |", damage: 0, energy: 25}
         ]
+    end
+
+    def class_name_caller
+        @class_caller
     end
 
 end

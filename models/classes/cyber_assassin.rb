@@ -8,6 +8,7 @@ class CyberAssassin < PlayerClass
     def initialize(player_name)
         super(player_name)
         @class_name = "cyber assassin"
+        @class_caller << "cyber assassin"
         @inventory = [
             power_pack = {item_name: "100%+ Power Charge Pack", charge_amount: 100, quantity: 1}
         ]
@@ -60,6 +61,10 @@ class CyberAssassin < PlayerClass
             {move: "| Nano Arm Blade Augmentation |", damage: 20, energy: 25},
             {move: "| Titan Shield Augmentation |", damage: 0, energy: 25}
         ]
+    end
+
+    def class_name_caller
+        @class_caller
     end
 
 end

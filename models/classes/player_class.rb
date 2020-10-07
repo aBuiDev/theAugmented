@@ -5,9 +5,10 @@ require 'terminal-table'
 # Player Classes
 class PlayerClass
     attr_accessor :name, :inventory, :inventory_row, :weapons, :weapon_row, :weapon_name, :quest_items, :hit_points, :power_level
-    attr_reader :class_name, :augmentations
+    attr_reader :class_name, :class_caller, :augmentations
     def initialize(player_name)
         @class_name = class_name
+        @class_caller = []
         @name = player_name
         @inventory = []
         @inventory_row = []
