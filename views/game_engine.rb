@@ -141,7 +141,7 @@ module GameIntro
         puts "You are heavily-augmented and highly-trained anti-terrorist agent, #{new_player.name.light_cyan} Caddel."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
-        puts "You are a #{new_player.class_name.yellow} class special agent."
+        puts "You are a #{new_player.class_name.light_cyan} class special agent."
         sleep 1
         puts InterfaceElements::INVISIBLE_SEPARATOR
         puts InterfaceElements::VISIBLE_SEPARATOR

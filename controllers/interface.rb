@@ -260,7 +260,7 @@ module InterfaceElements
                 new_player.add_weapon_name(sniper_rifle)
                 puts InterfaceElements::INVISIBLE_SEPARATOR
                 puts "Upon inspection of Terrorist Sub-Commander Helena Hellspawn's body,"
-                puts "you discover a #{"Sniper Rifle".light_cyan}."
+                puts "you discover a #{"Sniper Rifle".yellow}."
                 puts InterfaceElements::INVISIBLE_SEPARATOR
                 sleep 1
                 puts "You loot Terrorist Sub-Commander Helena Hellspawn's body.".yellow
